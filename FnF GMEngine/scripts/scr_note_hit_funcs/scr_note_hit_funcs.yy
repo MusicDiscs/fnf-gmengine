@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_note_hit_funcs",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_note_hit_funcs",
+  "parent":{
+    "name":"Playstate",
+    "path":"folders/Scripts/Playstate.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,21 @@
+{
+    "songlist":[
+        ["bopeebo", "pico", "dad"],
+        ["fresh", "pico", "dad"],
+        ["dadbattle", "pico", "dad"],
+        ["spookeez", "pico", "spooky"],
+        ["south", "pico", "spooky"],
+        ["pico", "pico", "pico"],
+        ["philly-nice", "pico", "pico"],
+        ["blammed", "pico", "pico"],
+        ["eggnog", "pico", "parents"],
+        ["ugh", "pico", "tankman"],
+        ["guns", "pico", "tankman"],
+        ["darnell", "", "darnell"],
+        ["lit-up", "", "darnell"],
+        ["2hot", "", "darnell"],
+        ["blazin", "", "darnell"]
+    ],
+    "difficulties":["easy", "normal", "hard"],
+    "color":[52, 205, 55]
+}

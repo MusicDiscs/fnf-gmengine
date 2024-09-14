@@ -1,0 +1,2 @@
+audio_destroy_stream(deathmusic)
+audio_destroy_stream(musicplay)

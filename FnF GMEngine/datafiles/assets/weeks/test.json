@@ -1,0 +1,25 @@
+{
+	"songs": [
+		["test", "bf", [165, 0, 77]],
+		["smash", "bf", [165, 0, 77]],
+		["ridge", "bf", [165, 0, 77]]
+	],
+
+	"weekCharacters": [
+		"bf",
+		"bf",
+		"bf"
+	],
+	"weekBackground": "stage",
+
+	"fileName": "test",
+	"storyColor": [253, 232, 113],
+
+	"storyName": "Testing Around",
+	"weekBefore": "tutorial",
+	"weekName": "Test",
+	"startUnlocked": true,
+
+	"hideStoryMode": false,
+	"hideFreeplay": false
+}

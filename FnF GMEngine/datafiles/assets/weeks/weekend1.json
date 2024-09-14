@@ -1,0 +1,29 @@
+{
+	"storyName": "Pyromaniac",
+	"difficulties": "Easy, Normal, Hard",
+	"hideFreeplay": false,
+	"weekBackground": "philly",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"storyColor": [146, 113, 253],
+	"weekBefore": "week7",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"darnell",
+		"pico",
+		"nene"
+	],
+	"fileName": "weekend1",
+	"songs": [
+		["darnell", "darnell", [146,113,253]],
+		["lit-up", "darnell", [146,113,253]],
+		["2hot", "darnell", [146,113,253]],
+		["blazin", "darnell", [146,113,253]]
+	],
+	"hideStoryMode": false,
+	"weekName": "Weekend 1",
+	"hiddenUntilUnlocked": false
+}

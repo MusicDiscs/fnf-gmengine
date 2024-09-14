@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_songload_functions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_songload_functions",
+  "parent":{
+    "name":"Playstate",
+    "path":"folders/Scripts/Playstate.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

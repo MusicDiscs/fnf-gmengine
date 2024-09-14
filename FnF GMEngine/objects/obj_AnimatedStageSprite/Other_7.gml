@@ -1,0 +1,1 @@
+if isbeatbounce == true and gfbounce == false {curspeed = 0}

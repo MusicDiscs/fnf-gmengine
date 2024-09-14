@@ -1,0 +1,9 @@
+-- GMEngine Credits -- 
+
+MusicDisc - Did all the stuff
+Funkin' Team - Made FnF
+Vy - Helped with code
+
+
+Jujuadams - Developer of Scribble
+Stephen Loney - Developer of TweenGMX

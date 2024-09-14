@@ -1,0 +1,1 @@
+stage.draw_stage()

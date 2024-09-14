@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_ui_data_vars",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_ui_data_vars",
+  "parent":{
+    "name":"Playstate",
+    "path":"folders/Scripts/Playstate.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

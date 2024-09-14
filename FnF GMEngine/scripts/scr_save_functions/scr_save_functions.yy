@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_save_functions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_save_functions",
+  "parent":{
+    "name":"Data",
+    "path":"folders/Scripts/Data.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,6 @@
+STEP 1 - Add you mod .json file (Use the template if you gotta!
+STEP 2 - Go into modlist.txt and add a new line and type in your file name. It's easy!
+STEP 3 - Add a folder for your mod. Should include the mods .win plus any mod external files.
+STEP 4 - Be sure that the folder and .win use the same name as your mod jsons fileName variable.
+
+That should work.
