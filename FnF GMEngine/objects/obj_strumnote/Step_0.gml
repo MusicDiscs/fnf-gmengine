@@ -8,6 +8,8 @@ if global.paused == false and global.swappingstate == false and obj_song_handler
 		if keybind_check_released(keybind) {
 			obj_input_handler.hold_miss_handler(nid)
 			if curanim == "hold" {destroy_cover()}
+			curanim = "strum"
+			sprite_index = struct_get(struct_get(skin, dir), curanim)
 		}
 		if keybind_check(keybind) {
 			curanim = obj_input_handler.attempt_tail_hold(nid)

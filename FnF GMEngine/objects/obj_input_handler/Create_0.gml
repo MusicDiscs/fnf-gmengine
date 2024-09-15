@@ -158,7 +158,6 @@ function attempt_tail_hold(_id) {
 }
 
 function hold_miss_handler(_id) {
-
 	if array_length(loadednotes) <= 0 {return "tap"}
 	for (var i = 0; i < array_length(loadednotes); i += 1) {
 		if loadednotes[i][1] == _id and loadednotes[i][4] == 0 and loadednotes[i][6] = 1 {
@@ -237,7 +236,7 @@ function modify_health(_hp, _subtract) {
 }
 
 function trigger_miss(_id) {
-	if obj_song_handler.isdying == false and loadednotes[_id][4] == 1 {
+	if obj_song_handler.isdying == false {
 		if loadednotes[_id][7] == 0 {note_miss_default(loadednotes[_id])}
 		else {
 			if struct_exists(global.customnotes, loadednotes[_id][7]) {

@@ -1216,5 +1216,75 @@ global.characterdata = {
 		sing_length : 8,
 		scale : 1,
 	},
+		
+	pico_dark : {
+		name : "Pico Playable (Dark)",
+		animations : {
+			idle : {
+				name : "idle",
+				path : spr_chr_picodark_idle,
+				offsets : [0, 0],
+				loops : false,
+			},
+			sing_left : {
+				name : "left",
+				path : spr_chr_picodark_left,
+				offsets : [-82, 11],
+				loops : false,
+			},
+			sing_down : {
+				name : "down",
+				path : spr_chr_picodark_down,
+				offsets : [-103, 84],
+				loops : false,
+			},
+			sing_up : {
+				name : "up",
+				path : spr_chr_picodark_up,
+				offsets : [-17, -36],
+				loops : false,
+			},
+			sing_right : {
+				name : "right",
+				path : spr_chr_picodark_right,
+				offsets : [54, -1],
+				loops : false,
+			},
+			miss_left : {
+				name : "miss_left",
+				path : spr_chr_picodark_left_miss,
+				offsets : [-80, -28],
+				loops : false,
+			},
+			miss_down : {
+				name : "miss_down",
+				path : spr_chr_picodark_down_miss,
+				offsets : [-98, 40],
+				loops : false,
+			},
+			miss_up : {
+				name : "miss_up",
+				path : spr_chr_picodark_up_miss,
+				offsets : [-20, -76],
+				loops : false,
+			},
+			miss_right : {
+				name : "miss_right",
+				path : spr_chr_picodark_right_miss,
+				offsets : [50, -49],
+				loops : false,
+			},
+		},
+		texgroup : "picodark",
+		no_anti : false,
+		gf_dance : false,
+		position : [0, 325],
+		healthicon : "pico",
+		flip_x : false,
+		health_color : [183, 216, 85],
+		camera_pos : [0, 0],
+		sing_length : 8,
+		scale : 1,
+	},
 	
 }
