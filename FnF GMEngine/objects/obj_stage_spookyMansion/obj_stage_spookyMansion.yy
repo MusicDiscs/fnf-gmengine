@@ -10,8 +10,8 @@
   "name":"obj_stage_spookyMansion",
   "overriddenProperties":[],
   "parent":{
-    "name":"Stages",
-    "path":"folders/Objects/Song Stuff/Visuals/Stages.yy",
+    "name":"Week 2",
+    "path":"folders/Objects/Song Stuff/Visuals/Stages/Week 2.yy",
   },
   "parentObjectId":null,
   "persistent":false,

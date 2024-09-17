@@ -11,8 +11,8 @@
   "name":"obj_stage_tankmanBattlefield",
   "overriddenProperties":[],
   "parent":{
-    "name":"Stages",
-    "path":"folders/Objects/Song Stuff/Visuals/Stages.yy",
+    "name":"Week 7",
+    "path":"folders/Objects/Song Stuff/Visuals/Stages/Week 7.yy",
   },
   "parentObjectId":null,
   "persistent":false,

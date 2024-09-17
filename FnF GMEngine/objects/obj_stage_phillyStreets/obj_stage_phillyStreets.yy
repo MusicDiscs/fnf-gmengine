@@ -9,8 +9,8 @@
   "name":"obj_stage_phillyStreets",
   "overriddenProperties":[],
   "parent":{
-    "name":"Stages",
-    "path":"folders/Objects/Song Stuff/Visuals/Stages.yy",
+    "name":"Weekend 1",
+    "path":"folders/Objects/Song Stuff/Visuals/Stages/Weekend 1.yy",
   },
   "parentObjectId":null,
   "persistent":false,

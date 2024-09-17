@@ -10,8 +10,8 @@
   "name":"obj_stage_phillyTrain",
   "overriddenProperties":[],
   "parent":{
-    "name":"Stages",
-    "path":"folders/Objects/Song Stuff/Visuals/Stages.yy",
+    "name":"Week 3",
+    "path":"folders/Objects/Song Stuff/Visuals/Stages/Week 3.yy",
   },
   "parentObjectId":null,
   "persistent":false,

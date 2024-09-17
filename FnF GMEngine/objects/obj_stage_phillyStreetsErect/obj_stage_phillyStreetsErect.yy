@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_stage_mallEvil",
+  "%Name":"obj_stage_phillyStreetsErect",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_stage_mallEvil",
+  "name":"obj_stage_phillyStreetsErect",
   "overriddenProperties":[],
   "parent":{
-    "name":"Week 5",
-    "path":"folders/Objects/Song Stuff/Visuals/Stages/Week 5.yy",
+    "name":"Weekend 1",
+    "path":"folders/Objects/Song Stuff/Visuals/Stages/Weekend 1.yy",
   },
   "parentObjectId":null,
   "persistent":false,

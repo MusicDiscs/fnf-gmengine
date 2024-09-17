@@ -9,8 +9,8 @@
   "name":"obj_stage_limoRide",
   "overriddenProperties":[],
   "parent":{
-    "name":"Stages",
-    "path":"folders/Objects/Song Stuff/Visuals/Stages.yy",
+    "name":"Week 4",
+    "path":"folders/Objects/Song Stuff/Visuals/Stages/Week 4.yy",
   },
   "parentObjectId":null,
   "persistent":false,

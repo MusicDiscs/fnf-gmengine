@@ -9,8 +9,8 @@
   "name":"obj_stage_mallXmas",
   "overriddenProperties":[],
   "parent":{
-    "name":"Stages",
-    "path":"folders/Objects/Song Stuff/Visuals/Stages.yy",
+    "name":"Week 5",
+    "path":"folders/Objects/Song Stuff/Visuals/Stages/Week 5.yy",
   },
   "parentObjectId":null,
   "persistent":false,
