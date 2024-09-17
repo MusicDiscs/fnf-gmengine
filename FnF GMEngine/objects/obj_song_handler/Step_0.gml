@@ -11,6 +11,11 @@ if global.paused = false {
 	}
 	else {
 		
+		if classicpan == true {
+			curcamx = lerp(curcamx, camxtarget, 0.015)
+			curcamy = lerp(curcamy, camytarget, 0.015)
+		}
+		
 		var _cam = view_camera[view_current]
 		camera_set_view_size(_cam, ((1280 * curzoom) * zoom_mult) * bop_zoom, ((720 * curzoom) * zoom_mult) * bop_zoom)
 		var _center = [curcamx + (1280/2), curcamy + (720/2)]

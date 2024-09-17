@@ -37,8 +37,12 @@ isdying = false
 
 curcamx = 0
 curcamy = 0
+camxtarget = 0
+camytarget = 0
+classicpan = false
 zoom_mult = 1
 camera_bop_rate = 4
+camera_bop_intensity_base = 0.01
 camera_bop_intensity = 0.01
 bop_zoom = 1
 curcamtweenx = TWEEN_NULL

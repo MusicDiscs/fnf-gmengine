@@ -34,6 +34,7 @@ global.clientprefs = {
 		hidehud : false,
 		discord : true,
 		volume : 1,
+		accuratenoteanim : false,
 	}
 	
 }

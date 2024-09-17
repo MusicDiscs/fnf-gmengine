@@ -6,6 +6,8 @@ else {isbf = false}
 image_xscale = 0.7
 image_yscale = 0.7
 
+isacc = true//global.clientprefs.gameplay.accuratenoteanim
+
 lastspeed = 1
 
 if isbf == true {skin = obj_input_handler.noteskin[0]}
