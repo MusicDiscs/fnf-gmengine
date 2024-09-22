@@ -24,7 +24,7 @@ if isbf == true {keybind = dir}
 
 function create_cover() {
 	if cover == undefined {cover = instance_create_depth(x, y, -1, obj_note_splash, {ishold : true, dir : dir, isbf : isbf, nid : nid})}
-	else if cover.visible = false {cover.curanim = "holdcover"; cover.visible = true; holdstate = 0; cover.image_xscale = 0.8; cover.image_yscale = 0.8}
+	else if cover.holdstate == 1 {cover.reset_holdcover()}
 }
 
 function destroy_cover() {

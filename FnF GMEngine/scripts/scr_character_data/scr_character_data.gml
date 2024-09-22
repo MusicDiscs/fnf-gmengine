@@ -422,7 +422,7 @@ global.characterdata = {
 			idle : {
 				name : "idle",
 				path : spr_chr_nene_idle,
-				offsets : [0, 0],
+				offsets : [-58, 0],
 				loops : false,
 			},
 		},
@@ -806,7 +806,7 @@ global.characterdata = {
 			idle : {
 				name : "idle",
 				path : spr_chr_gfchristmas_idle,
-				offsets : [0, 0],
+				offsets : [-82, 0],
 				loops : false,
 			},
 		},
@@ -988,13 +988,13 @@ global.characterdata = {
 		scale : 1,
 	},
 		
-	gf_tank : {
+	gf_tankmen : {
 		name : "Girlfriend (Tankman)",
 		animations : {
 			idle : {
 				name : "idle",
 				path : spr_chr_gftank_idle,
-				offsets : [0, 0],
+				offsets : [-110, 0],
 				loops : false,
 			},
 		},
@@ -1201,7 +1201,7 @@ global.characterdata = {
 			idle : {
 				name : "idle",
 				path : spr_chr_nenedark_idle,
-				offsets : [136, 0],
+				offsets : [77, 0],
 				loops : false,
 			},
 		},

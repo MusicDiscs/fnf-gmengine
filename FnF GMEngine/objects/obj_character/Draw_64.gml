@@ -1,0 +1,1 @@
+if charid == "dad" {draw_text(5, 5, holding)}

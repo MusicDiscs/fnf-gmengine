@@ -13,7 +13,7 @@ bf.camoffset = [-100, -100]
 dad.pos = [100, 100]
 dad.camoffset = [100, -100]
 
-gf.pos = [400, 130]
+gf.pos = [300, 130]
 gf.camoffset = [0, 0]
 
 function draw_stage() {

@@ -6,13 +6,13 @@ bf = instance_create_depth(0, 0, -1, obj_character, {charid : "bf"})
 gf = instance_create_depth(0, 0, -1, obj_character, {charid : "gf"})
 dad = instance_create_depth(0, 0, -1, obj_character, {charid : "dad"})
 
-bf.pos = [790.5, 185]
+bf.pos = [790.5, 100]
 bf.camoffset = [-220, -100]
 
 dad.pos = [530.5, 296]
 dad.camoffset = [250, -100]
 
-gf.pos = [360.5, 115]
+gf.pos = [300, 0]
 gf.camoffset = [0, 0]
 
 videoplaying = false

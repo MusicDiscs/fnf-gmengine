@@ -1,3 +1,4 @@
+
 if global.paused == false and global.swappingstate == false and obj_song_handler.isdying == false {
 	if isbf == true {
 		image_alpha = obj_input_handler.alpha_strum_player[nid]
@@ -34,10 +35,13 @@ if global.paused == false and global.swappingstate == false and obj_song_handler
 		oppanim = obj_input_handler.opponent_note_function(nid)
 		//show_debug_message(oppanim)
 		if oppanim != "strum" or curanim == "hold" {curanim = oppanim; sprite_index = struct_get(struct_get(skin, dir), curanim)}
+		//with (obj_strumnote) {
+		if curanim == "hold" and isbf == false {create_cover()}
+		else if isbf == false {destroy_cover()}
 		with (obj_strumnote) {
-			if curanim == "hold" and isbf == false {obj_song_handler.stage.dad.holding = true; create_cover()}
-			else if isbf == false {destroy_cover()}
+			if curanim == "hold" and isbf == false {obj_song_handler.stage.dad.holding = true}
 		}
+		//}
 	}
 }
 else {image_speed = 0}

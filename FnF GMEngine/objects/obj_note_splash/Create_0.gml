@@ -17,10 +17,25 @@ else {
 	sprite_index = struct_get(struct_get(skin, dir), curanim)
 }
 
+function reset_holdcover() {
+	if holdstate == 1 {
+		curanim = "holdcover"
+		image_index = 0
+		holdstate = 0
+		image_xscale = 0.8
+		image_yscale = 0.8
+		sprite_index = struct_get(struct_get(skin, dir), curanim)
+		visible = true
+	}
+}
+
 function end_holdcover() {
 	
 	if nid > 3 {
-		visible = false
+		if holdstate == 0 {
+			visible = false
+			holdstate = 1
+		}
 	}
 	else {
 		curanim = "holdsplash"
