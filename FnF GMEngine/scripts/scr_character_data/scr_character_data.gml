@@ -407,7 +407,7 @@ global.characterdata = {
 		texgroup : "pico",
 		no_anti : false,
 		gf_dance : false,
-		position : [0, 325],
+		position : [0, 300],
 		healthicon : "pico",
 		flip_x : false,
 		health_color : [183, 216, 85],

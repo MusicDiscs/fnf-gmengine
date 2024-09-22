@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Philly",
-    "path":"folders/Sprites/Song Assets/Stages/Philly.yy",
+    "name":"Normal",
+    "path":"folders/Sprites/Song Assets/Stages/Philly/Normal.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

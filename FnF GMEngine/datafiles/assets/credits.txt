@@ -7,3 +7,4 @@ Vy - Helped with code
 
 Jujuadams - Developer of Scribble
 Stephen Loney - Developer of TweenGMX
+DragoniteSpam - Useful shader tutorials I stole from

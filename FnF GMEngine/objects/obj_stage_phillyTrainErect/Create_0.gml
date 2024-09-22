@@ -27,22 +27,32 @@ train_max = 30
 train_speed = 400
 fps_accounting = (game_get_speed(gamespeed_fps) / 60) * 2
 
+shader_hue = [-26]
+shader_sat = [-16]
+shader_con = [0]
+shader_brightness = [-5]
+
 function draw_stage() {
 	
-	draw_sprite_ext(spr_stg_philly_sky, 0, get_parallax_coords(false, -100, 0.9), get_parallax_coords(true, -20, 0.9), 1, 1, 0, c_white, 1)
-	draw_sprite_ext(spr_stg_philly_city, 0, get_parallax_coords(false, -30, 0.7), get_parallax_coords(true, 0, 0.7), 0.85, 0.85, 0, c_white, 1)
-	draw_sprite_ext(spr_stg_philly_light, lightsframe, get_parallax_coords(false, -30, 0.7), get_parallax_coords(true, 0, 0.7), 0.85, 0.85, 0, c_white, lightsalpha)
-	draw_sprite_ext(spr_stg_philly_behindtrain, 0, -40, 50, 1, 1, 0, c_white, 1)
+	draw_sprite_ext(spr_stg_philly_sky_erect, 0, get_parallax_coords(false, -100, 0.9), get_parallax_coords(true, -20, 0.9), 1, 1, 0, c_white, 1)
+	draw_sprite_ext(spr_stg_philly_city_erect, 0, get_parallax_coords(false, -30, 0.7), get_parallax_coords(true, 0, 0.7), 0.85, 0.85, 0, c_white, 1)
+	draw_sprite_ext(spr_stg_philly_light_erect, lightsframe, get_parallax_coords(false, -30, 0.7), get_parallax_coords(true, 0, 0.7), 0.85, 0.85, 0, c_white, lightsalpha)
+	draw_sprite_ext(spr_stg_philly_behindtrain_erect, 0, -40, 50, 1, 1, 0, c_white, 1)
 	for(var i=0; i<train_max; i++) {
 		//draw_sprite_ext(spr_stg_philly_train, 0, trainx + (i * sprite_get_width(spr_stg_philly_train)), 360, 1, 1, 0, c_white, 1)
 	}
 	//draw_sprite_ext(spr_stg_philly_train, 0, trainx, 360, 1, 1, 0, c_white, 1)
-	draw_sprite_ext(spr_stg_philly_street, 0, -40, 50, 1, 1, 0, c_white, 1)
+	draw_sprite_ext(spr_stg_philly_street_erect, 0, -40, 50, 1, 1, 0, c_white, 1)
 	
+	//shader_set(shd_AdjustColor)
+	//shader_set_uniform_f_array(shader_get_uniform(shd_AdjustColor, "hue"), shader_hue)
+	//shader_set_uniform_f_array(shader_get_uniform(shd_AdjustColor, "saturation"), shader_sat)
+	//shader_set_uniform_f_array(shader_get_uniform(shd_AdjustColor, "contrast"), shader_con)
+	//shader_set_uniform_f_array(shader_get_uniform(shd_AdjustColor, "brightness"), shader_brightness)
 	gf.draw_character()
 	bf.draw_character()
 	dad.draw_character()
-	
+	shader_reset()
 	
 }
 	
