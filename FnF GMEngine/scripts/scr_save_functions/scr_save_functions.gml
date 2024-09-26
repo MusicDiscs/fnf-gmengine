@@ -40,8 +40,14 @@ function load_clientprefs()
 	var _loadArray = json_parse(_json);
 	
 	// Load the data ingame
-	global.clientprefs = array_get(_loadArray, 0)
-
+	var _tempconfig = array_get(_loadArray, 0)
+	for (var i = 0; i < array_length(global.clientprefs_sectionlist); i += 1) {
+		var _sectionid = global.clientprefs_sectionlist[i]
+		for (var j = 0; j < array_length(struct_get(global.clientprefs_index, _sectionid)); j += 1) {
+			var _settingname = struct_get(global.clientprefs_index, _sectionid)[j]
+			if struct_exists(_tempconfig[$ _sectionid], _settingname) {global.clientprefs[$ _sectionid][$ _settingname] = struct_get(_tempconfig[$ _sectionid], _settingname)}
+		}
+	}
 }
 
 function save_song_score(_song, _diff, _score, _acc) {

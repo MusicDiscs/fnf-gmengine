@@ -1,3 +1,10 @@
+global.clientprefs_sectionlist = ["keybinds", "graphics", "gameplay"]
+global.clientprefs_index = {
+	keybinds : ["left", "down", "right", "up", "reset", "confirm", "screenshot", "pause", "back", "fullscreen", "volup", "voldown", "debug", "mute"],
+	graphics : ["flashing", "beatzoom", "showfps", "showmem", "shaders", "curfps", "lowquality", "smoothing"],
+	gameplay : ["downscroll", "noteoffset", "hidehud", "discord", "volume", "accuratenoteanim"]
+}
+
 global.clientprefs = {
 
 	keybinds : {
@@ -38,7 +45,7 @@ global.clientprefs = {
 	}
 	
 }
-	
+
 global.highscores = {
 	
 	bopeebo : {
