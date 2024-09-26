@@ -37,11 +37,21 @@ function songevent_FocusCamera(_val) {
 				_time = 0
 				break;
 				
+				case "smoothStepInOut":
 				case "ExpoOut":
+				case "expoOut":
 				if struct_exists(_val, "duration") {
 					_time = (time_bpm_to_seconds(global.bpm) / global.timesig[0]) * _val.duration
 				}
 				break;
+				
+				case "quadOut":
+				if struct_exists(_val, "duration") {
+					_time = (time_bpm_to_seconds(global.bpm) / global.timesig[0]) * _val.duration
+				}
+				_ease = EaseOutQuad
+				break;
+				
 					
 			}
 		}
@@ -86,7 +96,9 @@ function songevent_FocusCamera(_val) {
 function songevent_PlayAnimation(_val) {
 
 	var _force = struct_get(_val, "force")
-
+	
+	_val.anim = string_replace_all(_val.anim, "-", "_")
+	
 	switch struct_get(_val, "target") {
 	
 		case "bf" :
@@ -121,16 +133,34 @@ function songevent_PlayAnimation(_val) {
 function songevent_ZoomCamera(_val) {
 	
 	TweenDestroy(obj_song_handler.curzoomtween)
+	var _ease = EaseOutQuart
 	
 	var _tarzoom = _val.zoom
 	
 	_tarzoom = 2 - _tarzoom
 	
-	
 	var _time = 1
 	if struct_exists(_val, "duration") {_time = ((time_bpm_to_seconds(global.bpm)*1000) / global.timesig[0]) * _val.duration / 1000}
 	
-	obj_song_handler.curzoomtween = TweenFire(obj_song_handler, EaseOutQuart, 0, true, 0, _time, "zoom_mult", obj_song_handler.zoom_mult, _tarzoom)
+	if struct_exists(_val, "ease") {
+		switch _val.ease {
+			
+			case "quadOut":
+			_ease = EaseOutQuad
+			break;
+			
+			case "INSTANT":
+			_time = 0
+			break;
+			
+			case "elasticInOut":
+			_ease = EaseInOutElastic
+			break;
+			
+		}
+	}
+	
+	obj_song_handler.curzoomtween = TweenFire(obj_song_handler, _ease, 0, true, 0, _time, "zoom_mult", obj_song_handler.zoom_mult, _tarzoom)
 	
 }
 	

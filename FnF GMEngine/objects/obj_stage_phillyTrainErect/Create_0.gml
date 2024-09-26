@@ -7,7 +7,7 @@ bf = instance_create_depth(0, 0, -1, obj_character, {charid : "bf"})
 gf = instance_create_depth(0, 0, -1, obj_character, {charid : "gf"})
 dad = instance_create_depth(0, 0, -1, obj_character, {charid : "dad"})
 
-bf.pos = [789.5, 35]
+bf.pos = [850, 35]
 bf.camoffset = [-200, -100]
 
 dad.pos = [268, 35]

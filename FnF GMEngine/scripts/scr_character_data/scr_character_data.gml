@@ -303,20 +303,20 @@ global.characterdata = {
 				hold_indices : [5, 12],
 				loops : false,
 			},
-			light_can : {
-				name : "light_can",
+			weekend_1_lightcan : {
+				name : "weekend-1-lightcan",
 				path : spr_chr_darnell_canlight,
 				offsets : [72, 119],
 				loops : false,
 			},
-			kick : {
-				name : "kick",
+			weekend_1_kickcan : {
+				name : "weekend-1-kickcan",
 				path : spr_chr_darnell_kickup,
 				offsets : [-10, -17],
 				loops : false,
 			},
-			knee : {
-				name : "knee",
+			weekend_1_kneecan : {
+				name : "weekend-1-kneecan",
 				path : spr_chr_darnell_knee,
 				offsets : [-19, -13],
 				loops : false,

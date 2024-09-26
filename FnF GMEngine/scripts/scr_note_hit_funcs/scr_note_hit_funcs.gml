@@ -31,6 +31,7 @@ function note_hit_default(_note, _judge) {
 	}
 	if _note[3] == undefined or _note[3] == "normal" or _note[3] == "" {obj_song_handler.stage.bf.push_char_animation("sing_" + (dirs[_note[1]]))}
 	else {obj_song_handler.stage.bf.push_char_animation(_note[3])}
+	//show_debug_message(_note[3])
 	obj_song_handler.stage.bf.func_on_notehit(_note);
 	audio_sound_gain(obj_song_handler.vocalbf, 1, 0)
 	modify_health(3, false)

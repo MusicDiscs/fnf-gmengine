@@ -16,6 +16,7 @@ function load_notes_playstate(_diff) {
 		if variable_struct_exists(chart.notes[$ _diff][i], "type") {_type = chart.notes[$ _diff][i].type}
 		var _anim = undefined
 		if variable_struct_exists(chart.notes[$ _diff][i], "k") {_anim = chart.notes[$ _diff][i].k}
+		if _anim != undefined {_anim = string_replace_all(_anim, "-", "_")}
 		// Note structure [position, direction, tail size, animation to play, is hit, amount of tail hit, is hold note missed, notetype]
 		var _newnote = [chart.notes[$ _diff][i].t, chart.notes[$ _diff][i].d, _tail, _anim, 1, 0, 1, _type]
 		array_push(thenotes, _newnote)

@@ -508,6 +508,7 @@
     {"id":{"name":"fnt_small","path":"fonts/fnt_small/fnt_small.yy",},},
     {"id":{"name":"fnt_statbar","path":"fonts/fnt_statbar/fnt_statbar.yy",},},
     {"id":{"name":"fnt_storymode","path":"fonts/fnt_storymode/fnt_storymode.yy",},},
+    {"id":{"name":"fnt_time","path":"fonts/fnt_time/fnt_time.yy",},},
     {"id":{"name":"scribble_fallback_font","path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},},
     {"id":{"name":"TGMX_Documentation","path":"notes/TGMX_Documentation/TGMX_Documentation.yy",},},
     {"id":{"name":"TGMX_Terms_of_Use","path":"notes/TGMX_Terms_of_Use/TGMX_Terms_of_Use.yy",},},
