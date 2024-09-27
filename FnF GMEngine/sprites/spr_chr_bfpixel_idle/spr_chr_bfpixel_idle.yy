@@ -39,7 +39,7 @@
   "origin":0,
   "parent":{
     "name":"Boyfriend Pixel",
-    "path":"folders/Sprites/Song Assets/Characters/Boyfriend Pixel.yy",
+    "path":"folders/Sprites/Song Assets/Characters/Boyfriend/Boyfriend Pixel.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -55,7 +55,7 @@
   "origin":0,
   "parent":{
     "name":"Girlfriend Car",
-    "path":"folders/Sprites/Song Assets/Characters/Girlfriend Car.yy",
+    "path":"folders/Sprites/Song Assets/Characters/Girlfriend/Girlfriend Car.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

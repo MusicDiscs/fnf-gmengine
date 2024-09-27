@@ -38,8 +38,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Dark",
-    "path":"folders/Sprites/Song Assets/Characters/Boyfriend/Dark.yy",
+    "name":"Boyfriend Dark",
+    "path":"folders/Sprites/Song Assets/Characters/Boyfriend/Boyfriend Dark.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -133,8 +133,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"grp_char_bfpixel",
+    "path":"texturegroups/grp_char_bfpixel",
   },
   "type":0,
   "VTile":false,

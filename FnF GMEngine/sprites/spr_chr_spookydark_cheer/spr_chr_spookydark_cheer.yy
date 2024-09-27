@@ -35,7 +35,7 @@
   "origin":0,
   "parent":{
     "name":"Spooky Dark",
-    "path":"folders/Sprites/Song Assets/Characters/Spooky Dark.yy",
+    "path":"folders/Sprites/Song Assets/Characters/Spooky/Spooky Dark.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -34,8 +34,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Spooky",
-    "path":"folders/Sprites/Song Assets/Characters/Spooky.yy",
+    "name":"Normal",
+    "path":"folders/Sprites/Song Assets/Characters/Spooky/Normal.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

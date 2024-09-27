@@ -55,7 +55,7 @@
   "origin":0,
   "parent":{
     "name":"Girlfriend Dark",
-    "path":"folders/Sprites/Song Assets/Characters/Girlfriend Dark.yy",
+    "path":"folders/Sprites/Song Assets/Characters/Girlfriend/Girlfriend Dark.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -197,8 +197,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"grp_char_gfdark",
+    "path":"texturegroups/grp_char_gfdark",
   },
   "type":0,
   "VTile":false,

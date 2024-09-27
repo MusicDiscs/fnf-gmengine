@@ -34,8 +34,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Dark",
-    "path":"folders/Sprites/Song Assets/Characters/Boyfriend/Dark.yy",
+    "name":"Boyfriend Dark",
+    "path":"folders/Sprites/Song Assets/Characters/Boyfriend/Boyfriend Dark.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -49,7 +49,7 @@
   "origin":0,
   "parent":{
     "name":"Monster",
-    "path":"folders/Sprites/Song Assets/Characters/Monster.yy",
+    "path":"folders/Sprites/Song Assets/Characters/Monster/Monster.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

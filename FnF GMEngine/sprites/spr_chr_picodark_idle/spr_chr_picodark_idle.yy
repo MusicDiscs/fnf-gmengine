@@ -39,7 +39,7 @@
   "origin":0,
   "parent":{
     "name":"Pico Dark",
-    "path":"folders/Sprites/Song Assets/Characters/Pico Dark.yy",
+    "path":"folders/Sprites/Song Assets/Characters/Pico/Pico Dark.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1286,5 +1286,97 @@ global.characterdata = {
 		sing_length : 8,
 		scale : 1,
 	},
+		
+	senpai : {
+		name : "Senpai",
+		animations : {
+			idle : {
+				name : "idle",
+				path : spr_chr_senpai_idle,
+				offsets : [0, 0],
+				loops : false,
+			},
+			sing_left : {
+				name : "left",
+				path : spr_chr_senpai_left,
+				offsets : [0, 0],
+				loops : false,
+			},
+			sing_down : {
+				name : "down",
+				path : spr_chr_senpai_down,
+				offsets : [0, 0],
+				loops : false,
+			},
+			sing_up : {
+				name : "up",
+				path : spr_chr_senpai_up,
+				offsets : [0, 0],
+				loops : false,
+			},
+			sing_right : {
+				name : "right",
+				path : spr_chr_senpai_right,
+				offsets : [0, 0],
+				loops : false,
+			},
+		},
+		texgroup : "senpai",
+		no_anti : true,
+		gf_dance : false,
+		position : [0, 0],
+		healthicon : "senpai",
+		flip_x : false,
+		health_color : [255, 170, 111],
+		camera_pos : [0, 0],
+		sing_length : 8,
+		scale : 6,
+	},
+		
+	senpai_angry : {
+		name : "Senpai (Angry)",
+		animations : {
+			idle : {
+				name : "idle",
+				path : spr_chr_senpaimad_idle,
+				offsets : [0, 0],
+				loops : false,
+			},
+			sing_left : {
+				name : "left",
+				path : spr_chr_senpaimad_left,
+				offsets : [0, 0],
+				loops : false,
+			},
+			sing_down : {
+				name : "down",
+				path : spr_chr_senpaimad_down,
+				offsets : [0, 0],
+				loops : false,
+			},
+			sing_up : {
+				name : "up",
+				path : spr_chr_senpaimad_up,
+				offsets : [0, 0],
+				loops : false,
+			},
+			sing_right : {
+				name : "right",
+				path : spr_chr_senpaimad_right,
+				offsets : [0, 0],
+				loops : false,
+			},
+		},
+		texgroup : "senpai",
+		no_anti : true,
+		gf_dance : false,
+		position : [0, 0],
+		healthicon : "senpai",
+		flip_x : false,
+		health_color : [255, 170, 111],
+		camera_pos : [0, 0],
+		sing_length : 8,
+		scale : 6,
+	},
 	
 }

@@ -35,8 +35,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Main",
-    "path":"folders/Sprites/Song Assets/Characters/Boyfriend/Main.yy",
+    "name":"Boyfriend",
+    "path":"folders/Sprites/Song Assets/Characters/Boyfriend/Boyfriend.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

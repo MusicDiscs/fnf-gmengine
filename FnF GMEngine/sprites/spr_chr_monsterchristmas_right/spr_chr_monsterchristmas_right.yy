@@ -40,7 +40,7 @@
   "origin":0,
   "parent":{
     "name":"Monster Christmas",
-    "path":"folders/Sprites/Song Assets/Characters/Monster Christmas.yy",
+    "path":"folders/Sprites/Song Assets/Characters/Monster/Monster Christmas.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -55,7 +55,7 @@
   "origin":0,
   "parent":{
     "name":"Girlfriend Tankman",
-    "path":"folders/Sprites/Song Assets/Characters/Girlfriend Tankman.yy",
+    "path":"folders/Sprites/Song Assets/Characters/Girlfriend/Girlfriend Tankman.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

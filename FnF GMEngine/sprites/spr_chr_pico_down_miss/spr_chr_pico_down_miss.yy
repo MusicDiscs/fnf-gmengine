@@ -35,7 +35,7 @@
   "origin":0,
   "parent":{
     "name":"Pico",
-    "path":"folders/Sprites/Song Assets/Characters/Pico.yy",
+    "path":"folders/Sprites/Song Assets/Characters/Pico/Pico.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

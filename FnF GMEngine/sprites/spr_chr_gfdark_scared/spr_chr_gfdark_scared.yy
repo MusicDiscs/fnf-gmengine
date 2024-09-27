@@ -29,7 +29,7 @@
   "origin":0,
   "parent":{
     "name":"Girlfriend Dark",
-    "path":"folders/Sprites/Song Assets/Characters/Girlfriend Dark.yy",
+    "path":"folders/Sprites/Song Assets/Characters/Girlfriend/Girlfriend Dark.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

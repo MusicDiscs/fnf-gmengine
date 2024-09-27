@@ -55,7 +55,7 @@
   "origin":0,
   "parent":{
     "name":"Girlfriend Christmas",
-    "path":"folders/Sprites/Song Assets/Characters/Girlfriend Christmas.yy",
+    "path":"folders/Sprites/Song Assets/Characters/Girlfriend/Girlfriend Christmas.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
