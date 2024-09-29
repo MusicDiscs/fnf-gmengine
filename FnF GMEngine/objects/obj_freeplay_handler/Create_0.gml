@@ -4,6 +4,9 @@ if !audio_is_playing(global.menumusic) {audio_play_sound(global.menumusic, 0, tr
 curselect = 0
 curdiff = 2
 
+alt_inst = false
+curinst = 0
+
 function load_freeplay_file() {
 	var _finalfile = ""
 	var _folder = working_directory + "assets\\data\\freeplay\\"
@@ -23,7 +26,9 @@ function load_song_list(_file) {
 		var _tempmeta = load_song_metadata(freeplayfile.songlist[i][0], diffarray[curdiff], freeplayfile.songlist[i][1])
 		var _name = "UNDEFINED"
 		if _tempmeta != undefined {_name = _tempmeta.songName}
-		array_push(_songlist, [freeplayfile.songlist[i][0], _name, get_icon_sprite(freeplayfile.songlist[i][2]), freeplayfile.color, freeplayfile.songlist[i][1]])
+		var _insts = undefined
+		if array_length(freeplayfile.songlist[i]) == 4 {_insts = freeplayfile.songlist[i][3]}
+		array_push(_songlist, [freeplayfile.songlist[i][0], _name, get_icon_sprite(freeplayfile.songlist[i][2]), freeplayfile.color, freeplayfile.songlist[i][1], _insts])
 	}
 	return _songlist
 }
@@ -59,6 +64,8 @@ function change_selection(_isup) {
 	realx = (curselect * 155)
 	realcolor = songlist[curselect][3]
 	var _diff = string_lower(diffarray[curdiff])
+	if songlist[curselect][5] != undefined {alt_inst = true; curinst = 0}
+	else {alt_inst = false}
 	if struct_exists(global.highscores, songlist[curselect][0]) and struct_exists(global.highscores[$ songlist[curselect][0]], _diff) {realscore = struct_get(global.highscores[$ songlist[curselect][0]], _diff)}
 	else {realscore = [0, 0]}
 	
@@ -87,12 +94,27 @@ function change_diff(_isup) {
 		songlist[i][1] = _name
 	}
 	
-	
+}
+
+function change_inst(_isup) {
+	if _isup == true {
+		if curinst <= 0 {curdiff = array_length(songlist[curselect][5]) - 1}
+		else {curinst--}
+	}
+	else {
+		if curinst >= array_length(songlist[curselect][5]) - 1 {curinst = 0}
+		else {curinst++}
+	}
 }
 
 function select_song() {
 
 	audio_play_sound(global.confirmsound, 1, false)
-	start_song(songlist[curselect][0], string_lower(diffarray[curdiff]), songlist[curselect][4])
+	var _inst_tag = songlist[curselect][4]
+	if alt_inst == true {_inst_tag = string_lower(songlist[curselect][5][curinst])}
+	start_song(songlist[curselect][0], string_lower(diffarray[curdiff]), songlist[curselect][4], _inst_tag)
 	
 }
+
+if songlist[curselect][5] != undefined {alt_inst = true; curinst = 0}
+else {alt_inst = false}

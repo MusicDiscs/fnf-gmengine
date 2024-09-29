@@ -1,4 +1,3 @@
-varying vec2 fragCoord; 
 #pragma header
 
 uniform float hue;
@@ -30,9 +29,9 @@ vec3 applyHSBCEffect(vec3 color)
 
 void main()
 {
-	//vec4 texture2DColor = texture2D2D(bitmap, openfl_TextureCoordv);
+	//vec4 textureColor = texture2D(bitmap, openfl_TextureCoordv);
 
-	//vec3 outColor = applyHSBCEffect(texture2DColor.rgb);
+	//vec3 outColor = applyHSBCEffect(textureColor.rgb);
 
-	//gl_FragColor = vec4(outColor * texture2DColor.a, texture2DColor.a);
+	//gl_FragColor = vec4(outColor * textureColor.a, textureColor.a);
 }

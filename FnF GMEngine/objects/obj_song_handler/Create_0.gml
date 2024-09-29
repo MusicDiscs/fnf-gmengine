@@ -57,7 +57,7 @@ global.songstarted = false
 
 inputhandler = instance_create_depth(0, 0, -1, obj_input_handler)
 
-load_song_playstate(global.cursong, global.curdiff, global.curtag)
+load_song_playstate(global.cursong, global.curdiff, global.curtag, global.inst_tag)
 if metadata == undefined {game_restart(); exit}
 
 accpoints = 0

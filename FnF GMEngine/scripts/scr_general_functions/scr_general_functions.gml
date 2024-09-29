@@ -58,7 +58,7 @@ function get_icon_sprite(_icon) {
 	
 }
 	
-function start_song(_song, _diff, _tag = "") {
+function start_song(_song, _diff, _tag = "", _inst_tag = "default") {
 	
 	global.storymode = false
 	global.songplaylist = []
@@ -66,7 +66,9 @@ function start_song(_song, _diff, _tag = "") {
 	global.cursong = _song
 	global.curdiff = _diff
 	global.curtag = _tag
-	show_debug_message(_tag)
+	if _inst_tag == "default" {global.inst_tag = ""}
+	else {global.inst_tag = _inst_tag}
+	show_debug_message(_inst_tag)
 	global.songplaylist = [_song]
 	swap_state(rm_Playstate)
 	

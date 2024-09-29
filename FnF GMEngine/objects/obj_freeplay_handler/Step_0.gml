@@ -1,8 +1,14 @@
 if keybind_check_pressed("back") {audio_play_sound(global.cancelsound, 1, false); swap_state(rm_MainMenu)}
 if keybind_check_pressed("down") {change_selection(false)}
 if keybind_check_pressed("up") {change_selection(true)}
-if keybind_check_pressed("left") {change_diff(true)}
-if keybind_check_pressed("right") {change_diff(false)}
+if keyboard_check(vk_shift) and alt_inst == true {
+	if keybind_check_pressed("left") {change_inst(true)}
+	if keybind_check_pressed("right") {change_inst(false)}
+}
+else {
+	if keybind_check_pressed("left") {change_diff(true)}
+	if keybind_check_pressed("right") {change_diff(false)}
+}
 if keybind_check_pressed("confirm") {select_song()}
 if keyboard_check_pressed(vk_control) {
 	if global.curcharacter = "bf" {global.curcharacter = "pico"}

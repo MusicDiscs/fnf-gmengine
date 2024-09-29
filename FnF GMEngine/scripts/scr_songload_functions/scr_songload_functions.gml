@@ -1,4 +1,4 @@
-function load_song_playstate(_name, _diff, _tag = "") {
+function load_song_playstate(_name, _diff, _tag = "", _inst_tag = "") {
 	
 	metadata = load_song_metadata(_name, _diff, _tag)
 	if metadata == undefined {show_debug_message("INVALID SONG"); exit}
@@ -29,7 +29,7 @@ function load_song_playstate(_name, _diff, _tag = "") {
 	show_debug_message(string(inputhandler.noteskin))
 	inputhandler.data_setup()
 	with (inputhandler.id) {script_execute(asset_get_index("ui_load_vars_" + uiskin))}
-	load_song_audio_playstate(_name, _diff, _tag)
+	load_song_audio_playstate(_name, _diff, _tag, _inst_tag)
 }
 
 function load_song_metadata(_name, _diff, _path = "") {
@@ -87,7 +87,7 @@ function play_song_audio_playstate() {
 	
 }
 	
-function load_song_audio_playstate(_name, _diff, _tag = "") {
+function load_song_audio_playstate(_name, _diff, _tag = "", _instag = "") {
 	
 	var _folder = working_directory + "assets\\songs\\" + _name + "\\"
 	var _metadata = load_song_metadata(_name, _diff)
@@ -120,7 +120,8 @@ function load_song_audio_playstate(_name, _diff, _tag = "") {
 		if file_exists(_dadvocal) {vocaldad_file = audio_create_stream(_dadvocal)}
 	}
 	else if _tag != "" {
-		inst_file = audio_create_stream(_folder + "Inst-" + _tag + ".ogg")
+		if _instag == "" {inst_file = audio_create_stream(_folder + "Inst.ogg")}
+		else {inst_file = audio_create_stream(_folder + "Inst-" + _instag + ".ogg")}
 		var _bfvocal = _folder + "Voices-" + metadata.playData.characters.player + "-" + _tag + ".ogg"
 		var _dadvocal = _folder + "Voices-" + metadata.playData.characters.opponent + "-" + _tag + ".ogg"
 		if !file_exists(_bfvocal) {
@@ -143,7 +144,8 @@ function load_song_audio_playstate(_name, _diff, _tag = "") {
 		if file_exists(_dadvocal) {vocaldad_file = audio_create_stream(_dadvocal)}
 	}
 	else {
-		inst_file = audio_create_stream(_folder + "Inst.ogg")
+		if _instag == "" {inst_file = audio_create_stream(_folder + "Inst.ogg")}
+		else {inst_file = audio_create_stream(_folder + "Inst-" + _instag + ".ogg")}
 		var _bfvocal = _folder + "Voices-" + metadata.playData.characters.player + ".ogg"
 		var _dadvocal = _folder + "Voices-" + metadata.playData.characters.opponent + ".ogg"
 		if !file_exists(_bfvocal) {
