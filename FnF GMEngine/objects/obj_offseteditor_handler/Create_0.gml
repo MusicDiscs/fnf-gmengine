@@ -7,6 +7,8 @@ set_bpm(137)
 curchar = "bf"
 curanimnum = 0
 
+filteron = false
+
 chardata = undefined
 animlist = []
 
@@ -23,7 +25,7 @@ ghostframe = 0
 ghostx = 0
 ghosty = 0
 ghostalpha = 0
-ghostscale = 1
+ghostscale = [1, 1]
 
 function setup_char(_char) {
 	var _finalchar = "bf"

@@ -59,6 +59,6 @@ function stage_beat_hit() {
 		if obj_persistent.curbeat != 8 {audio_play_sound(lightning_sounds[irandom_range(0, 1)], 1, false)}
 		bf.push_char_animation("scared")
 		gf.push_char_animation("scared")
-		gf.forceanim = true
+		//gf.forceanim = true
 	}
 }

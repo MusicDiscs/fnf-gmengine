@@ -35,3 +35,6 @@ if global.paused == false {
 	ui_step()
 	
 }
+else {
+	ui_paused()	
+}

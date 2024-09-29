@@ -1,0 +1,3 @@
+gpu_set_tex_filter(obj_offseteditor_handler.filteron)
+draw_self()
+gpu_set_tex_filter(global.clientprefs.graphics.smoothing)

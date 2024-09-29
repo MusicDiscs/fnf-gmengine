@@ -45,12 +45,12 @@ function setup_functions(_name) {
 
 function push_char_animation(_anim) {
 	if struct_exists(chardata.animations, _anim) and forceanim == false {
-	curanim = _anim
-	sprite_index = struct_get(chardata.animations, _anim).path
-	offsets = struct_get(chardata.animations, _anim).offsets
-	image_index = 0
-	image_speed = defaultspeed
-	ready = false
+		curanim = _anim
+		sprite_index = struct_get(chardata.animations, _anim).path
+		offsets = struct_get(chardata.animations, _anim).offsets
+		image_index = 0
+		image_speed = defaultspeed
+		ready = false
 	}
 }
 

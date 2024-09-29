@@ -133,8 +133,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"grp_char_senpai",
+    "path":"texturegroups/grp_char_senpai",
   },
   "type":0,
   "VTile":false,

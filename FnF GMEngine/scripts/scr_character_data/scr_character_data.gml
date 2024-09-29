@@ -1091,12 +1091,60 @@ global.characterdata = {
 				offsets : [0, 0],
 				hold_indices : [9, 14],
 				loops : false,
-			}
+			},
+			sing_left : {
+				name : "left",
+				path : spr_chr_bfpixel_left,
+				offsets : [12, 0],
+				loops : false,
+			},
+			sing_down : {
+				name : "down",
+				path : spr_chr_bfpixel_down,
+				offsets : [0, 0],
+				loops : false,
+			},
+			sing_up : {
+				name : "up",
+				path : spr_chr_bfpixel_up,
+				offsets : [-6, 0],
+				loops : false,
+			},
+			sing_right : {
+				name : "right",
+				path : spr_chr_bfpixel_right,
+				offsets : [-6, 0],
+				loops : false,
+			},
+			miss_left : {
+				name : "miss_left",
+				path : spr_chr_bfpixel_left_miss,
+				offsets : [12, -1],
+				loops : false,
+			},
+			miss_down : {
+				name : "miss_down",
+				path : spr_chr_bfpixel_down_miss,
+				offsets : [0, -1],
+				loops : false,
+			},
+			miss_up : {
+				name : "miss_up",
+				path : spr_chr_bfpixel_up_miss,
+				offsets : [-6, 0],
+				loops : false,
+			},
+			miss_right : {
+				name : "miss_right",
+				path : spr_chr_bfpixel_right_miss,
+				offsets : [-6, -1],
+				loops : false,
+			},
 		},
 		texgroup : "bfpixel",
 		no_anti : true,
 		gf_dance : false,
-		position : [0, 0],
+		position : [0, 350],
 		healthicon : "bf_pixel",
 		flip_x : false,
 		health_color : [49, 176, 209],
@@ -1407,7 +1455,7 @@ global.characterdata = {
 			sing_left : {
 				name : "left",
 				path : spr_chr_senpai_left,
-				offsets : [0, 0],
+				offsets : [-24, 0],
 				loops : false,
 			},
 			sing_down : {
@@ -1419,13 +1467,13 @@ global.characterdata = {
 			sing_up : {
 				name : "up",
 				path : spr_chr_senpai_up,
-				offsets : [0, 0],
+				offsets : [0, -36],
 				loops : false,
 			},
 			sing_right : {
 				name : "right",
 				path : spr_chr_senpai_right,
-				offsets : [0, 0],
+				offsets : [1, 0],
 				loops : false,
 			},
 		},
@@ -1453,7 +1501,7 @@ global.characterdata = {
 			sing_left : {
 				name : "left",
 				path : spr_chr_senpaimad_left,
-				offsets : [0, 0],
+				offsets : [-24, 0],
 				loops : false,
 			},
 			sing_down : {
@@ -1465,7 +1513,7 @@ global.characterdata = {
 			sing_up : {
 				name : "up",
 				path : spr_chr_senpaimad_up,
-				offsets : [0, 0],
+				offsets : [0, -36],
 				loops : false,
 			},
 			sing_right : {
@@ -1482,6 +1530,40 @@ global.characterdata = {
 		healthicon : "senpai",
 		flip_x : false,
 		health_color : [255, 170, 111],
+		camera_pos : [0, 0],
+		sing_length : 8,
+		scale : 6,
+	},
+		
+	gf_pixel : {
+		name : "Girlfriend (Pixel)",
+		animations : {
+			idle : {
+				name : "Idle",
+				path : spr_chr_gfpixel_danceleft,
+				offsets : [0, 20],
+				loops : false,
+			},
+			dance_left : {
+				name : "Dance Left",
+				path : spr_chr_gfpixel_danceleft,
+				offsets : [0, 20],
+				loops : false,
+			},
+			dance_right : {
+				name : "Dance Right",
+				path : spr_chr_gfpixel_danceright,
+				offsets : [0, 20],
+				loops : false,
+			},
+		},
+		texgroup : "gfpixel",
+		no_anti : true,
+		gf_dance : true,
+		position : [0, 0],
+		healthicon : "gf",
+		flip_x : false,
+		health_color : [165, 0, 77],
 		camera_pos : [0, 0],
 		sing_length : 8,
 		scale : 6,

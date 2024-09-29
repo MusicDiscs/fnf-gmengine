@@ -61,9 +61,14 @@ if keyboard_check_pressed(ord("G")) {
 	ghostx = character.x
 	ghosty = character.y
 	ghostalpha = 0.6
-	ghostscale = character.image_xscale
+	ghostscale[0] = character.image_xscale
+	ghostscale[1] = character.image_yscale
 }
 if keyboard_check_pressed(ord("H")) {ghostalpha = 0}
+if keyboard_check_pressed(ord("F")) {
+	if filteron == true {filteron = false}
+	else {filteron = true}
+}
 if keybind_check_pressed("back") {swap_state(rm_MainMenu)}
 
 var _cam = view_camera[view_current]
