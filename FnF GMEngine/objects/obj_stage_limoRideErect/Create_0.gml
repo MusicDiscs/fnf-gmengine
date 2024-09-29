@@ -18,7 +18,7 @@ gf.camoffset = [-150, 0]
 
 bglimo = create_animated_stagesprite(spr_stg_limo_bglimo, -200, 480, false, false)
 mainlimo = create_animated_stagesprite(spr_stg_limo_driver, -120, 550, false, false)
-demon = create_animated_stagesprite(spr_stg_limo_bgdancer, 100, 100, true, true)
+demon = create_animated_stagesprite(spr_stg_limo_bgdancer_left, 100, 100, true, true, spr_stg_limo_bgdancer_right)
 
 function draw_stage() {
 

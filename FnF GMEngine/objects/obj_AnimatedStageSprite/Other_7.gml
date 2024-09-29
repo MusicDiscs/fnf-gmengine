@@ -1,1 +1,5 @@
-if isbeatbounce == true and gfbounce == false {curspeed = 0}
+if isbeatbounce == true {
+	curspeed = 0
+	image_speed = 0
+	image_index = image_number - 1
+}

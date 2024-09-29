@@ -1,6 +1,6 @@
 sprite_index = cursprite
 curspeed = 1
-bpmspeed = ((global.bpm / 60)) - 1
+bpmspeed = 1
 
 
 function draw_animated_sprite() {
@@ -8,5 +8,11 @@ function draw_animated_sprite() {
 }
 
 function animated_beat() {
-	if isbeatbounce == true and gfbounce = false {curspeed = bpmspeed}
+	if isbeatbounce == true and gfbounce = false {image_index = 0}
+	else if gfbounce == true {
+		//image_speed = 1
+		image_index = 0
+		if sprite_index == cursprite {sprite_index = secsprite}
+		else {sprite_index = cursprite}
+	}
 }

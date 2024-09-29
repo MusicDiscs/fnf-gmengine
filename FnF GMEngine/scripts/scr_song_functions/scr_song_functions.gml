@@ -12,9 +12,9 @@ function get_judgement(_ms) {
 	
 }
 	
-function create_animated_stagesprite(_sprite, _x, _y, _isbeatbounce, _gfbounce) {
+function create_animated_stagesprite(_sprite, _x, _y, _isbeatbounce = false, _gfbounce = false, _secondspr = spr_blank) {
 
-	return instance_create_depth(_x, _y, -1, obj_AnimatedStageSprite, {cursprite : _sprite, isbeatbounce : _isbeatbounce, gfbounce : _gfbounce})
+	return instance_create_depth(_x, _y, -1, obj_AnimatedStageSprite, {cursprite : _sprite, secsprite : _secondspr, isbeatbounce : _isbeatbounce, gfbounce : _gfbounce})
 	
 }
 	
