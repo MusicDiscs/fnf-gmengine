@@ -196,8 +196,20 @@ global.characterdata = {
 		name : "Girlfriend",
 		animations : {
 			idle : {
-				name : "idle",
-				path : spr_chr_gf_idle,
+				name : "Idle",
+				path : spr_chr_gf_danceleft,
+				offsets : [0, 0],
+				loops : false,
+			},
+			dance_left : {
+				name : "Dance Left",
+				path : spr_chr_gf_danceleft,
+				offsets : [0, 0],
+				loops : false,
+			},
+			dance_right : {
+				name : "Dance Right",
+				path : spr_chr_gf_danceright,
 				offsets : [0, 0],
 				loops : false,
 			},
@@ -421,8 +433,20 @@ global.characterdata = {
 		animations : {
 			idle : {
 				name : "idle",
-				path : spr_chr_nene_idle,
+				path : spr_chr_nene_danceleft,
 				offsets : [-58, 0],
+				loops : false,
+			},
+			dance_left : {
+				name : "Dance Left",
+				path : spr_chr_nene_danceleft,
+				offsets : [0, 0],
+				loops : false,
+			},
+			dance_right : {
+				name : "Dance Right",
+				path : spr_chr_nene_danceright,
+				offsets : [0, 0],
 				loops : false,
 			},
 		},
@@ -713,7 +737,19 @@ global.characterdata = {
 		animations : {
 			idle : {
 				name : "idle",
-				path : spr_chr_gfcar_idle,
+				path : spr_chr_gfcar_danceleft,
+				offsets : [0, 0],
+				loops : false,
+			},
+			dance_left : {
+				name : "Dance Left",
+				path : spr_chr_gfcar_danceleft,
+				offsets : [0, 0],
+				loops : false,
+			},
+			dance_right : {
+				name : "Dance Right",
+				path : spr_chr_gfcar_danceright,
 				offsets : [0, 0],
 				loops : false,
 			},
@@ -804,9 +840,21 @@ global.characterdata = {
 		name : "Girlfriend (Christmas)",
 		animations : {
 			idle : {
-				name : "idle",
-				path : spr_chr_gfchristmas_idle,
-				offsets : [-82, 0],
+				name : "Idle",
+				path : spr_chr_gfchristmas_danceleft,
+				offsets : [0, 0],
+				loops : false,
+			},
+			dance_left : {
+				name : "Dance Left",
+				path : spr_chr_gfchristmas_danceleft,
+				offsets : [0, 0],
+				loops : false,
+			},
+			dance_right : {
+				name : "Dance Right",
+				path : spr_chr_gfchristmas_danceright,
+				offsets : [0, 0],
 				loops : false,
 			},
 		},
@@ -992,9 +1040,21 @@ global.characterdata = {
 		name : "Girlfriend (Tankman)",
 		animations : {
 			idle : {
-				name : "idle",
-				path : spr_chr_gftank_idle,
-				offsets : [-110, 0],
+				name : "Idle",
+				path : spr_chr_gftank_danceleft,
+				offsets : [0, 0],
+				loops : false,
+			},
+			dance_left : {
+				name : "Dance Left",
+				path : spr_chr_gftank_danceleft,
+				offsets : [0, 0],
+				loops : false,
+			},
+			dance_right : {
+				name : "Dance Right",
+				path : spr_chr_gftank_danceright,
+				offsets : [0, 0],
 				loops : false,
 			},
 		},
@@ -1119,8 +1179,20 @@ global.characterdata = {
 		name : "Girlfriend (Dark)",
 		animations : {
 			idle : {
-				name : "idle",
-				path : spr_chr_gfdark_idle,
+				name : "Idle",
+				path : spr_chr_gfdark_danceleft,
+				offsets : [0, 0],
+				loops : false,
+			},
+			dance_left : {
+				name : "Dance Left",
+				path : spr_chr_gfdark_danceleft,
+				offsets : [0, 0],
+				loops : false,
+			},
+			dance_right : {
+				name : "Dance Right",
+				path : spr_chr_gfdark_danceright,
 				offsets : [0, 0],
 				loops : false,
 			},
@@ -1200,8 +1272,20 @@ global.characterdata = {
 		animations : {
 			idle : {
 				name : "idle",
-				path : spr_chr_nenedark_idle,
-				offsets : [77, 0],
+				path : spr_chr_nenedark_danceleft,
+				offsets : [-58, 0],
+				loops : false,
+			},
+			dance_left : {
+				name : "Dance Left",
+				path : spr_chr_nenedark_danceleft,
+				offsets : [0, 0],
+				loops : false,
+			},
+			dance_right : {
+				name : "Dance Right",
+				path : spr_chr_nenedark_danceright,
+				offsets : [0, 0],
 				loops : false,
 			},
 		},

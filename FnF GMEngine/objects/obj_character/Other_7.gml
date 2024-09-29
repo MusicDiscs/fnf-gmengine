@@ -6,4 +6,4 @@ if curanim == "idle" and struct_exists(struct_get(chardata.animations, curanim),
 	image_index = (struct_get(chardata.animations, curanim).hold_indices[0])
 	image_speed = defaultspeed
 }
-curanim = "idle"
+if chardata.gf_dance == false {curanim = "idle"}

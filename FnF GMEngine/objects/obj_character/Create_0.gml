@@ -70,9 +70,14 @@ function refresh_char(_name) {
 }
 
 function char_beat_hit() {
-	
-	if curanim == "idle" and ready == true and holding = false and chardata.gf_dance == false {
-			push_char_animation("idle")
+	if chardata.gf_dance == true {
+		if holding == false {
+			if curanim == "dance_left" {push_char_animation("dance_right")}
+			else {push_char_animation("dance_left")}	
+		}
+	}
+	else if curanim == "idle" and ready == true and holding = false { //and chardata.gf_dance == false {
+		push_char_animation("idle")
 	}
 	func_on_beat()
 }
@@ -93,6 +98,8 @@ switch charid {
 	
 }
 
-if chardata.gf_dance == true {defaultspeed = bpmspeed}
-
-push_char_animation("idle")
+if chardata.gf_dance == true {
+	push_char_animation("dance_left")
+	defaultspeed = bpmspeed
+}
+else {push_char_animation("idle")}

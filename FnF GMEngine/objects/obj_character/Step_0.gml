@@ -10,8 +10,8 @@ else {
 	func_on_step()
 }
 if chardata.gf_dance == true {
-	if curanim == "idle" and image_index = image_number - 1 and holding == false {push_char_animation("idle")}
-	bpmspeed = ((global.bpm / 48) / 2)
-	if curanim == "idle" {defaultspeed = bpmspeed}
+	//if curanim == "idle" and image_index = image_number - 1 and holding == false {push_char_animation("idle")}
+	bpmspeed = 1//(global.bpm / 100)
+	if curanim == "dance_left" or curanim == "dance_right" {defaultspeed = bpmspeed}
 	else {defaultspeed = 1}
 }
