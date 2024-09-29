@@ -806,6 +806,8 @@
     {"id":{"name":"spr_chr_darnell_pissed","path":"sprites/spr_chr_darnell_pissed/spr_chr_darnell_pissed.yy",},},
     {"id":{"name":"spr_chr_darnell_right","path":"sprites/spr_chr_darnell_right/spr_chr_darnell_right.yy",},},
     {"id":{"name":"spr_chr_darnell_up","path":"sprites/spr_chr_darnell_up/spr_chr_darnell_up.yy",},},
+    {"id":{"name":"spr_chr_gf_danceleft","path":"sprites/spr_chr_gf_danceleft/spr_chr_gf_danceleft.yy",},},
+    {"id":{"name":"spr_chr_gf_danceright","path":"sprites/spr_chr_gf_danceright/spr_chr_gf_danceright.yy",},},
     {"id":{"name":"spr_chr_gf_idle","path":"sprites/spr_chr_gf_idle/spr_chr_gf_idle.yy",},},
     {"id":{"name":"spr_chr_gf_scared","path":"sprites/spr_chr_gf_scared/spr_chr_gf_scared.yy",},},
     {"id":{"name":"spr_chr_gfcar_idle","path":"sprites/spr_chr_gfcar_idle/spr_chr_gfcar_idle.yy",},},

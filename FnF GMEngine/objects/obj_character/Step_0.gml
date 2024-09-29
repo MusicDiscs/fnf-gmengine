@@ -11,7 +11,7 @@ else {
 }
 if chardata.gf_dance == true {
 	if curanim == "idle" and image_index = image_number - 1 and holding == false {push_char_animation("idle")}
-	bpmspeed = ((global.bpm / 60) / 2)
+	bpmspeed = ((global.bpm / 48) / 2)
 	if curanim == "idle" {defaultspeed = bpmspeed}
 	else {defaultspeed = 1}
 }
