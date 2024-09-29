@@ -71,7 +71,7 @@
     },
     "name":"spr_stg_mall_topbopper",
     "playback":1,
-    "playbackSpeed":30.0,
+    "playbackSpeed":24.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",

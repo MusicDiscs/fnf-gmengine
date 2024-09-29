@@ -72,12 +72,12 @@ function refresh_char(_name) {
 function char_beat_hit() {
 	if chardata.gf_dance == true {
 		if holding == false {
-			if curanim == "dance_left" {push_char_animation("dance_right")}
-			else {push_char_animation("dance_left")}	
+			if curanim == "dance_left" and obj_persistent.curbeat % 2 == 0 {push_char_animation("dance_right")}
+			else if curanim == "dance_right" and obj_persistent.curbeat % 2 == 1 {push_char_animation("dance_left")}	
 		}
 	}
 	else if curanim == "idle" and ready == true and holding = false { //and chardata.gf_dance == false {
-		push_char_animation("idle")
+		if obj_persistent.curbeat % 2 == 1 {push_char_animation("idle")}
 	}
 	func_on_beat()
 }

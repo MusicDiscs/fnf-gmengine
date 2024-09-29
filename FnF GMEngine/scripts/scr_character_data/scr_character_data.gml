@@ -559,7 +559,19 @@ global.characterdata = {
 		animations : {
 			idle : {
 				name : "idle",
-				path : spr_chr_spooky_idle,
+				path : spr_chr_spooky_danceleft,
+				offsets : [0, 0],
+				loops : false,
+			},
+			dance_left : {
+				name : "Dance Left",
+				path : spr_chr_spooky_danceleft,
+				offsets : [0, 0],
+				loops : false,
+			},
+			dance_right : {
+				name : "Dance Right",
+				path : spr_chr_spooky_danceright,
 				offsets : [0, 0],
 				loops : false,
 			},
@@ -1220,7 +1232,19 @@ global.characterdata = {
 		animations : {
 			idle : {
 				name : "idle",
-				path : spr_chr_spookydark_idle,
+				path : spr_chr_spookydark_danceleft,
+				offsets : [0, 0],
+				loops : false,
+			},
+			dance_left : {
+				name : "Dance Left",
+				path : spr_chr_spookydark_danceleft,
+				offsets : [0, 0],
+				loops : false,
+			},
+			dance_right : {
+				name : "Dance Right",
+				path : spr_chr_spookydark_danceright,
 				offsets : [0, 0],
 				loops : false,
 			},
