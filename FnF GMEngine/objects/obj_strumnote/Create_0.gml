@@ -10,15 +10,15 @@ isacc = global.clientprefs.gameplay.accuratenoteanim
 
 lastspeed = 1
 
-if isbf == true {skin = obj_input_handler.noteskin[0]}
-else {skin = obj_input_handler.noteskin[1]}
-
 oppanim = "strum"
 curanim = "strum"
 
 cover_exist = false
 
 cover = undefined
+
+if isbf == true {skin = obj_input_handler.noteskin[0]}
+else {skin = obj_input_handler.noteskin[1]}
 
 if isbf == true {keybind = dir}
 

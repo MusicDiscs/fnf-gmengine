@@ -1,4 +1,3 @@
-
 if global.paused == false and global.swappingstate == false and obj_song_handler.isdying == false {
 	if isbf == true {
 		image_alpha = obj_input_handler.alpha_strum_player[nid]

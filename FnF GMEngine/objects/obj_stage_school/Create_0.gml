@@ -7,13 +7,13 @@ bf = instance_create_depth(0, 0, -1, obj_character, {charid : "bf"})
 gf = instance_create_depth(0, 0, -1, obj_character, {charid : "gf"})
 dad = instance_create_depth(0, 0, -1, obj_character, {charid : "dad"})
 
-bf.pos = [639, 144]
+bf.pos = [639, 104]
 bf.camoffset = [-200, -100]
 
-dad.pos = [25, 94]
+dad.pos = [25, 44]
 dad.camoffset = [160, 0]
 
-gf.pos = [340, 166]
+gf.pos = [340, 136]
 gf.camoffset = [0, 0]
 
 freakpath = [spr_stg_pixel_bgfreaks_left, spr_stg_pixel_bgfreaks_right]

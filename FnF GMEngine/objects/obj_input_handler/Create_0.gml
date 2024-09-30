@@ -48,6 +48,31 @@ function data_setup() {
 	
 	curspeed = chartspeed / 2
 	
+	if global.clientprefs.gameplay.downscroll == false {
+		for (var i = 0; i < 4; i += 1) {
+			funvar = i
+			var _note = instance_create_depth(arrowx[0] + (arrowxoffset * i), arrowy, -1, obj_strumnote, {nid : i, dir : dirs[i], skin : noteskin[0]})
+			array_push(bfnotes, _note)
+		}
+		for (var i = 4; i < 8; i += 1) {
+			funvar = i
+			var _note = instance_create_depth(arrowx[1] + (arrowxoffset * (i - 4)), arrowy, -1, obj_strumnote, {nid : i, dir : dirs[i - 4], skin : noteskin[1]})
+			array_push(dadnotes, _note)
+		}
+	}
+	else {
+		for (var i = 0; i < 4; i += 1) {
+			funvar = i
+			var _note = instance_create_depth(arrowx[0] + (arrowxoffset * i), (720 - arrowy), -1, obj_strumnote, {nid : i, dir : dirs[i], skin : noteskin[0]})
+			array_push(bfnotes, _note)
+		}
+		for (var i = 4; i < 8; i += 1) {
+			funvar = i
+			var _note = instance_create_depth(arrowx[1] + (arrowxoffset * (i - 4)), (720 - arrowy), -1, obj_strumnote, {nid : i, dir : dirs[i - 4], skin : noteskin[1]})
+			array_push(dadnotes, _note)
+		}
+	}
+	
 }
 
 timecheck = 0
@@ -71,31 +96,6 @@ dirs[3] = "right"
 
 bfnotes = []
 dadnotes = []
-
-if global.clientprefs.gameplay.downscroll == false {
-	for (var i = 0; i < 4; i += 1) {
-		funvar = i
-		var _note = instance_create_depth(arrowx[0] + (arrowxoffset * i), arrowy, -1, obj_strumnote, {nid : i, dir : dirs[i]})
-		array_push(bfnotes, _note)
-	}
-	for (var i = 4; i < 8; i += 1) {
-		funvar = i
-		var _note = instance_create_depth(arrowx[1] + (arrowxoffset * (i - 4)), arrowy, -1, obj_strumnote, {nid : i, dir : dirs[i - 4]})
-		array_push(dadnotes, _note)
-	}
-}
-else {
-	for (var i = 0; i < 4; i += 1) {
-		funvar = i
-		var _note = instance_create_depth(arrowx[0] + (arrowxoffset * i), (720 - arrowy), -1, obj_strumnote, {nid : i, dir : dirs[i]})
-		array_push(bfnotes, _note)
-	}
-	for (var i = 4; i < 8; i += 1) {
-		funvar = i
-		var _note = instance_create_depth(arrowx[1] + (arrowxoffset * (i - 4)), (720 - arrowy), -1, obj_strumnote, {nid : i, dir : dirs[i - 4]})
-		array_push(dadnotes, _note)
-	}
-}
 
 global.hitwindow_ms = 160
 

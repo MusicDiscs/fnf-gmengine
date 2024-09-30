@@ -81,8 +81,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"grp_uiskin_funkin",
-    "path":"texturegroups/grp_uiskin_funkin",
+    "name":"grp_uiskin_pixel",
+    "path":"texturegroups/grp_uiskin_pixel",
   },
   "type":0,
   "VTile":false,
