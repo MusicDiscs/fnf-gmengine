@@ -11,7 +11,7 @@ bf.pos = [639, 104]
 bf.camoffset = [-200, -100]
 
 dad.pos = [25, 44]
-dad.camoffset = [160, 0]
+dad.camoffset = [110, -50]
 
 gf.pos = [340, 136]
 gf.camoffset = [0, 0]

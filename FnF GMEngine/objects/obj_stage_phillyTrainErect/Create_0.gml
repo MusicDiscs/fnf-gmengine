@@ -44,7 +44,7 @@ function draw_stage() {
 	//draw_sprite_ext(spr_stg_philly_train, 0, trainx, 360, 1, 1, 0, c_white, 1)
 	draw_sprite_ext(spr_stg_philly_street_erect, 0, -40, 50, 1, 1, 0, c_white, 1)
 	
-	shader_set(shd_AdjustColor)
+	//shader_set(shd_AdjustColor)
 	shader_set_uniform_f_array(shader_get_uniform(shd_AdjustColor, "hue"), shader_hue)
 	shader_set_uniform_f_array(shader_get_uniform(shd_AdjustColor, "saturation"), shader_sat)
 	shader_set_uniform_f_array(shader_get_uniform(shd_AdjustColor, "contrast"), shader_con)
