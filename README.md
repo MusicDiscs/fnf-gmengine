@@ -1,2 +1,2 @@
-# fnf-gmengine
-A port of the game Friday Night Funkin to the engine Gamemaker Studio 2. Pretty simple to mod. If there's demand I'll make tutorials. 
+# Friday Night Funkin - GMEngine
+A port of the game FnF to the engine Gamemaker Studio 2. Pretty simple to mod. If there's demand I'll make tutorials. 
