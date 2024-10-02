@@ -133,7 +133,11 @@ function ui_load_vars_funkin() {
 function ui_load_vars_pixel() {
 	
 	// Initialize any vars relating to UI
-
+	
+	judgealpha = 0
+	judgealpha_base = 1.2
+	judgey = 530
+	
 	barpath = asset_get_index("spr_" + uiskin + "_healthbar")
 	bar_center = 640
 	barx_min = bar_center - (sprite_get_width(barpath) / 2)
@@ -165,6 +169,14 @@ function ui_load_vars_pixel() {
 	// I think it's pretty obvious where each of these functions is ran
 	ui_draw = function() {
 		if global.clientprefs.gameplay.downscroll == false {
+			
+			draw_set_alpha(alpha_ui)
+			gpu_set_tex_filter(false)
+			draw_sprite_ext(asset_get_index("spr_rating_" + uiskin + "_" + string(judgement)), 0, 640, judgey, 4.5, 4.5, 0, c_white, judgealpha)
+			draw_set_alpha(judgealpha)
+			draw_text_scribble(640, judgey + 40, "[fa_center][fnt_judge][c_judge]" + string(timecheck) + " ms")
+			draw_set_alpha(alpha_ui)
+			
 			draw_set_alpha(alpha_ui)
 			gpu_set_tex_filter(false)
 			//draw_healthbar(timebarx_min, timebary_min, timebarx_max, timebary_max, obj_song_handler.timeprogress * 100, c_white, c_black, c_black, 1, true, true)
@@ -189,6 +201,10 @@ function ui_load_vars_pixel() {
 		else {
 			draw_set_alpha(alpha_ui)
 			gpu_set_tex_filter(false)
+			draw_sprite_ext(asset_get_index("spr_rating_" + uiskin + "_" + string(judgement)), 0, 640, (720 - judgey), 4.5, 4.5, 0, c_white, judgealpha)
+			draw_set_alpha(judgealpha)
+			draw_text_scribble(640, 720 - (judgey + 80), "[fa_center][fnt_judge][c_judge]" + string(timecheck) + " ms")
+			draw_set_alpha(alpha_ui)
 			
 			//draw_healthbar(timebarx_min, (720 - timebary_min), timebarx_max, (720 - timebary_max), obj_song_handler.timeprogress * 100, c_white, c_black, c_black, 1, true, true)
 			draw_text_scribble(642, (700 - timebary_center) - 20, "[fa_center][fnt_time][c_black]" + string(obj_song_handler.timestring))
@@ -228,8 +244,10 @@ function ui_load_vars_pixel() {
 			icon_scale[0] -= 0.15
 			icon_scale[1] -= 0.15
 		}
+		judgealpha -= 0.3
 	}
 	ui_notehit = function() {
+		judgealpha = 1
 	}
 	ui_paused = function() {
 		
