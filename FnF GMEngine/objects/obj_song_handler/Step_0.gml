@@ -43,7 +43,7 @@ if global.paused = false {
 			set_bpm(metadata.timeChanges[0].bpm)
 			if struct_exists(metadata.timeChanges[0], "n") {global.timesig = [metadata.timeChanges[0].n, metadata.timeChanges[0].d]}
 			else {global.timesig = [4, 4]}
-			if struct_exists(metadata.timeChanges[0], "b") {obj_persistent.curbeat = metadata.timeChanges[0].b}
+			if struct_exists(metadata.timeChanges[0], "b") {obj_persistent.curbeat = int64(metadata.timeChanges[0].b)}
 			array_delete(metadata.timeChanges, 0, 1)
 		}
 	}

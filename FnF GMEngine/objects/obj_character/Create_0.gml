@@ -76,8 +76,11 @@ function char_beat_hit() {
 			else if curanim == "dance_right" and obj_persistent.curbeat % 2 == 1 {push_char_animation("dance_left")}	
 		}
 	}
-	else if curanim == "idle" and ready == true and holding = false { //and chardata.gf_dance == false {
-		if obj_persistent.curbeat % 2 == 1 {push_char_animation("idle")}
+	else {
+		if ready == true and holding = false {
+			if curanim == "idle" {if obj_persistent.curbeat % 2 == 1 {push_char_animation("idle")}}
+			else {push_char_animation("idle")}
+		}
 	}
 	func_on_beat()
 }
