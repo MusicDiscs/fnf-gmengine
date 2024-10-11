@@ -122,7 +122,7 @@ function attempt_note_press(_id) {
 				timecheck = _ms
 				judgement = get_judgement(_ms)
 				loadednotes[i][4] = 0
-				if judgement == 3 {
+				if judgement == 3 and global.clientprefs.gameplay.splashes == true {
 					var _splashy = arrowy
 					if global.clientprefs.gameplay.downscroll == true {_splashy = (720-arrowy)}
 					instance_create_depth(arrowx[0] + (arrowxoffset * loadednotes[i][1]), _splashy, -2, obj_note_splash, {dir : dirs[loadednotes[i][1]], ishold : false, nid : loadednotes[i][1]})

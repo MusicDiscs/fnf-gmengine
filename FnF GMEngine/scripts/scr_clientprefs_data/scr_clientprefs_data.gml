@@ -2,7 +2,7 @@ global.clientprefs_sectionlist = ["keybinds", "graphics", "gameplay"]
 global.clientprefs_index = {
 	keybinds : ["left", "down", "right", "up", "reset", "confirm", "screenshot", "pause", "back", "fullscreen", "volup", "voldown", "debug", "mute"],
 	graphics : ["flashing", "beatzoom", "showfps", "showmem", "shaders", "curfps", "lowquality", "smoothing"],
-	gameplay : ["downscroll", "noteoffset", "hidehud", "discord", "volume", "accuratenoteanim"]
+	gameplay : ["downscroll", "noteoffset", "hidehud", "discord", "volume", "accuratenoteanim", "splashes"]
 }
 
 global.clientprefs = {
@@ -42,6 +42,7 @@ global.clientprefs = {
 		discord : true,
 		volume : 1,
 		accuratenoteanim : false,
+		splashes : true,
 	}
 	
 }
