@@ -1,3 +1,4 @@
+global.eventlist = ["FocusCamera", "PlayAnimation", "ZoomCamera", "ChangeCharacter", "SetCameraBop"]
 function song_event_run(_name, _val) {
 	
 	show_debug_message("Event " + string(_name) + " ran with values " + string(_val) + ".")

@@ -24,9 +24,13 @@ if global.paused == false {
 		array_delete(thenotes, 0, 1)
 	}
 
-	if array_length(eventqueue) > 0 and eventqueue[0][0] <= hitwindow_center {
-	song_event_run(eventqueue[0][1], eventqueue[0][2])
-	array_delete(eventqueue, 0, 1)
+	if array_length(eventqueue) > 0 {
+	for (var i = 0; i < array_length(eventqueue); i += 1) {
+		if eventqueue[i][0] <= hitwindow_center {
+			song_event_run(eventqueue[i][1], eventqueue[i][2])
+			array_delete(eventqueue, i, 1)
+		}
+	}
 	}
 	
 	var _curhealth = playerhealth/healthmax

@@ -21,7 +21,8 @@
         ["ugh", "", "tankman", ["Default", "Pico"]],
         ["guns", "", "tankman", ["Default", "Pico"]],
         ["stress", "", "tankman"],
-        ["darnell", "bf", "darnell", ["BF", "Default"]]
+        ["darnell", "bf", "darnell", ["BF", "Default"]],
+        ["manipulator", "", "bf"]
     ],
     "difficulties":["Easy", "Normal", "Hard", "Erect", "Nightmare"],
     "color":[51, 196, 255]

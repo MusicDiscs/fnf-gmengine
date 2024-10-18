@@ -2,6 +2,7 @@ draw_sprite_ext(spr_menu_bg, 0, 0, 0, 1, 1, 0, c_green, 1)
 
 draw_text_scribble(640, 25, "[fnt_big][fa_center]" + "Debug Menu")
 draw_text_scribble(640, 75, "[fnt_small][fa_center]" + "Press CONFIRM to enter character editor.")
+draw_text_scribble(640, 125, "[fnt_small][fa_center]" + "Press F4 to enter chart porter.")
 
 
 draw_text(10, 700, "Built on " + date_datetime_string(GM_build_date))
