@@ -1,13 +1,12 @@
 titleready = false
 whitealpha = 1
 whitespeed = 0.01
-if !variable_global_exists("menumusic") {global.menumusic = load_music("freakyMenu")}
+if !variable_global_exists("menumusic") {global.menumusic = load_music("freakyMenu"); set_bpm(102)}
 else {
 	titleready = true
 	whitealpha = 1
 	whitespeed = 0.02
 }
-set_bpm(102)
 load_tex_group("grp_menu_title")
 image_speed = ((global.bpm / 60) / 2)
 enterframe = 0
@@ -112,7 +111,7 @@ if titleready = false {
 	}
 }	
 else {
-	if ringtoneplaying == true and obj_persistent.curbeat % 2 == 0 {
+	if ringtoneplaying == true and global.curbeat % 2 == 0 {
 		if curcolor >= array_length(colors) - 1 {curcolor = 0}
 		else {curcolor++}
 	}

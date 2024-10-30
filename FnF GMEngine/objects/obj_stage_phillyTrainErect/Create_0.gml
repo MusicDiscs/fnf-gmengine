@@ -35,7 +35,7 @@ shader_brightness = [-5]
 function draw_stage() {
 	
 	draw_sprite_ext(spr_stg_philly_sky_erect, 0, get_parallax_coords(false, -100, 0.9), get_parallax_coords(true, -20, 0.9), 1, 1, 0, c_white, 1)
-	draw_sprite_ext(spr_stg_philly_city_erect, 0, get_parallax_coords(false, -30, 0.7), get_parallax_coords(true, 0, 0.7), 0.85, 0.85, 0, c_white, 1)
+	draw_sprite_ext(spr_stg_philly_city_erect, 0, get_parallax_coords(false, -10, 0.7), get_parallax_coords(true, 0, 0.7), 0.85, 0.85, 0, c_white, 1)
 	draw_sprite_ext(spr_stg_philly_light_erect, lightsframe, get_parallax_coords(false, -30, 0.7), get_parallax_coords(true, 0, 0.7), 0.85, 0.85, 0, c_white, lightsalpha)
 	draw_sprite_ext(spr_stg_philly_behindtrain_erect, 0, -40, 50, 1, 1, 0, c_white, 1)
 	for(var i=0; i<train_max; i++) {
@@ -58,7 +58,7 @@ function draw_stage() {
 	
 function stage_beat_hit() {
 	with (obj_AnimatedStageSprite) {animated_beat()}
-	if (obj_persistent.curbeat - 1)/4 == floor((obj_persistent.curbeat - 1)/4) {
+	if (global.curbeat - 1)/4 == floor((global.curbeat - 1)/4) {
 		lightsframe++
 		TweenDestroy(lightstween)
 		lightstween = TweenFire(obj_stage_phillyTrainErect, EaseInOutExpo, 0, true, 0, (60/global.bpm) * 6, "lightsalpha", 1, 0.2)

@@ -2,7 +2,7 @@ randomize()
 
 global.cursong = global.songplaylist[0]
 
-set_bpm(0)
+//set_bpm(0)
 
 inst_file = undefined
 vocalbf_file = undefined
@@ -148,7 +148,7 @@ function handler_beat_hit() {
 	
 	if global.songstarted = false and startframetimer <= 0 and songready == true {
 
-		switch obj_persistent.curbeat {
+		switch global.curbeat {
 			
 			case 1:
 			audio_play_sound(intro3, 1, false)
@@ -171,14 +171,16 @@ function handler_beat_hit() {
 			global.songstarted = true
 			play_song_audio_playstate()
 			instplaying = true
+			global.curbeat = 0
+			global.curmeasure = 0
 			break;
 	
 		}
 	
 	}
-	else if startframetimer > 0 {obj_persistent.curbeat--}
+	else if startframetimer > 0 {global.curbeat--}
 	else {
-		if (obj_persistent.curbeat - 1)/camera_bop_rate == floor((obj_persistent.curbeat - 1)/camera_bop_rate) {
+		if (global.curbeat - 1)/camera_bop_rate == floor((global.curbeat - 1)/camera_bop_rate) {
 			bop_zoom -= camera_bop_intensity
 			TweenDestroy(bopzoomtween)
 			var _time = time_bpm_to_seconds(global.bpm) * camera_bop_rate

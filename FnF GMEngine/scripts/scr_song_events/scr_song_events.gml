@@ -4,6 +4,9 @@ function song_event_run(_name, _val) {
 	show_debug_message("Event " + string(_name) + " ran with values " + string(_val) + ".")
 	
 	var _funcname = "songevent_" + _name
+	if variable_instance_exists(obj_song_handler.stage, _funcname) {
+		with (obj_song_handler.stage) {script_execute(variable_instance_get(self, _funcname), _val)}
+	}
 	if variable_global_exists(_funcname) {
 		script_execute(asset_get_index(_funcname), _val)
 	}

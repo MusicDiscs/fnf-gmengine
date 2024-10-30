@@ -7,6 +7,8 @@ global.debug = false // To set compiled builds into debug mode, make this true.
 if string(GM_build_type) == "run" {global.debug = true}
 debugoverlay = false
 
+global.paused = false
+
 global.opendate = date_current_datetime()
 
 global.songplaylist = []
@@ -23,6 +25,7 @@ global.curcharacter = "bf"
 global.lastchar = ""
 
 global.gjuserdata = 0
+
 if GameJolt_User_LogIn_FromCache() {
 	show_debug_message("Logged in via cache!")
 	gamejolt_post_login()
@@ -31,7 +34,12 @@ else {show_debug_message("Failed to log in via cache.")}
 
 global.bpm = 0
 global.timesig = [4, 4]
-curbeat = 0
+global.curbeat = 0
+global.curmeasure = 0
+global.ismeasure = false
+
+beat_microseconds = 0
+beat_timer = 0
 
 global.keybinds[0] = vk_left
 global.keybinds[1] = ord("S")
@@ -80,5 +88,6 @@ gpu_set_tex_filter(global.clientprefs.graphics.smoothing)
 beat_handler = time_source_create(time_source_game, time_bpm_to_seconds(global.bpm), time_source_units_seconds, function()
 {
     beat_hit()
+	audio_play_sound(sfx_beat, 1, false)
 }, [], -1);
 time_source_start(beat_handler)

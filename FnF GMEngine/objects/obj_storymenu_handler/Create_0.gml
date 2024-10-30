@@ -1,7 +1,6 @@
 visible = true
 image_speed = ((global.bpm / 60) / 2)
-set_bpm(102)
-if !audio_is_playing(global.menumusic) {audio_play_sound(global.menumusic, 0, true)}
+if !audio_is_playing(global.menumusic) {audio_play_sound(global.menumusic, 0, true); set_bpm(102)}
 
 function load_week(_name) {
 	

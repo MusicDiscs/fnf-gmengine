@@ -1,8 +1,11 @@
-function set_bpm(_bpm) {
+function set_bpm(_bpm, _timesig = [4, 4]) {
 	
 	time_source_destroy(obj_persistent.beat_handler)
 	global.bpm = _bpm
-	obj_persistent.curbeat = 0
+	global.timesig = _timesig
+	global.curbeat = 0
+	global.curmeasure = 0
+	//obj_persistent.beat_timer = 0
 	obj_persistent.beat_handler = time_source_create(time_source_game, time_bpm_to_seconds(global.bpm), time_source_units_seconds, function()
 	{
 	    beat_hit()
@@ -13,10 +16,19 @@ function set_bpm(_bpm) {
 
 function beat_hit() {
 
-	obj_persistent.curbeat++
-	show_debug_message("beat " + string(obj_persistent.curbeat))
+	global.curbeat++
 	with (obj_song_handler) {handler_beat_hit()}
-	with (obj_title_scene) {title_beat(obj_persistent.curbeat)}
+	with (obj_title_scene) {title_beat(global.curbeat)}
+	if global.curbeat % global.timesig[1] == 0 {
+		//audio_play_sound(sfx_measure, 1, false)
+		global.curmeasure++
+		global.ismeasure = true
+		show_debug_message("beat " + string(global.curbeat) + " measure " + string(global.curmeasure))
+	}
+	else {
+		//audio_play_sound(sfx_beat, 1, false)
+		show_debug_message("beat " + string(global.curbeat))
+	}
 	
 }
 

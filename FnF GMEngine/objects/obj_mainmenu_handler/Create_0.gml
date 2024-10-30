@@ -1,6 +1,5 @@
 load_tex_group("grp_menu_main")
-set_bpm(102)
-if !audio_is_playing(global.menumusic) {audio_play_sound(global.menumusic, 0, true)}
+if !audio_is_playing(global.menumusic) {audio_play_sound(global.menumusic, 0, true); set_bpm(102)}
 menulist = ["storymode", "freeplay", "credits", "options"]
 btnlist = []
 curselect = 0

@@ -38,11 +38,11 @@ function draw_stage() {
 
 function stage_beat_hit() {
 	var _rand = irandom_range(1, 10)
-	if (_rand == 1 and lightningalpha = 0 and obj_persistent.curbeat > (lightningbeat + lightningtimer)) or (obj_persistent.curbeat == 8 and global.cursong == "spookeez") {
+	if (_rand == 1 and lightningalpha = 0 and global.curbeat > (lightningbeat + lightningtimer)) or (global.curbeat == 8 and global.cursong == "spookeez") {
 		lightningframe = 0
 		lightningalpha = 1
-		lightningbeat = obj_persistent.curbeat
-		if obj_persistent.curbeat != 8 {audio_play_sound(lightning_sounds[irandom_range(0, 1)], 1, false)}
+		lightningbeat = global.curbeat
+		if global.curbeat != 8 {audio_play_sound(lightning_sounds[irandom_range(0, 1)], 1, false)}
 		bf.push_char_animation("scared")
 		gf.push_char_animation("scared")
 		gf.forceanim = true

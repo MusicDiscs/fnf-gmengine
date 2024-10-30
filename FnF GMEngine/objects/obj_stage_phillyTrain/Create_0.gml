@@ -48,7 +48,7 @@ function draw_stage() {
 	
 function stage_beat_hit() {
 	with (obj_AnimatedStageSprite) {animated_beat()}
-	if (obj_persistent.curbeat - 1)/4 == floor((obj_persistent.curbeat - 1)/4) {
+	if (global.curbeat - 1)/4 == floor((global.curbeat - 1)/4) {
 		lightsframe++
 		TweenDestroy(lightstween)
 		lightstween = TweenFire(obj_stage_phillyTrain, EaseInOutExpo, 0, true, 0, (60/global.bpm) * 6, "lightsalpha", 1, 0.2)

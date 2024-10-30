@@ -1,4 +1,5 @@
 depth = -1
+global.ismeasure = false
 // Volume setter shit
 if keybind_check_pressed("volup") {
 if global.clientprefs.gameplay.volume != 1 {global.clientprefs.gameplay.volume += 0.1; thealpha = 2; audio_play_sound(volup_sound, 1, false); save_clientprefs()}
@@ -18,6 +19,17 @@ if keybind_check_pressed("screenshot") {
 }
 if keybind_check_pressed("fullscreen") {window_set_fullscreen(!window_get_fullscreen())}
 
+/*/ Beat Shit
+if global.paused == false {
+	beat_microseconds = 1000000 * (60 / global.bpm)
+	if beat_timer <= 0 {
+		beat_hit()
+		//audio_play_sound(sfx_beat, 1, false)
+		beat_timer += beat_microseconds
+	}
+	beat_timer -= delta_time
+}
+*/
 // Transition Stuff
 if global.swappingstate == true {
 switch transtype {
