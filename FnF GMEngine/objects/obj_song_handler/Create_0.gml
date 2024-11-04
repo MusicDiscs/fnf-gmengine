@@ -9,6 +9,8 @@ vocalbf_file = undefined
 vocaldad_file = undefined
 
 songready = false
+assetsloaded = false
+killmyself = 5
 
 startframetimer = 1 // Exists to delay countdown by one frame, hopefully fixes lag on beats
 
@@ -73,7 +75,7 @@ else {stage = instance_create_depth(0, 0, -1, obj_stage_mainStage)}
 
 load_playstate_assets(false)
 
-set_bpm(metadata.timeChanges[0].bpm)
+set_bpm(metadata.timeChanges[0].bpm, [4, 4], false)
 curzoom = 2 - stage.zoom
 
 var _mins = 0
@@ -86,9 +88,9 @@ if _secs < 0 {_secs = 0}
 if _secs <= 9 {timestring = string(_mins) + ":0" + string(_secs)}
 else {timestring = string(_mins) + ":" + string(_secs)}
 
-inputhandler.startspace_base = (((60/global.bpm) * 4) * 1000)
+inputhandler.startspace_base = (time_seconds_to_bpm(global.bpm) * 1000 * 4)
 inputhandler.startspace = inputhandler.startspace_base
-var _frames = (game_get_speed(gamespeed_fps) * (60/global.bpm)) * 4
+var _frames = ((game_get_speed(gamespeed_fps) * time_seconds_to_bpm(global.bpm)) * 4)
 inputhandler.startframe = (inputhandler.startspace_base / _frames)
 
 var _tempicon = asset_get_index("spr_icon_" + stage.bf.chardata.healthicon)
@@ -116,9 +118,9 @@ function check_for_asset_reload() {
 
 function begin_song() {
 
+	songready = true
 	set_bpm(metadata.timeChanges[0].bpm)
 	array_delete(metadata.timeChanges, 0, 1)
-	songready = true
 	
 }
 
@@ -169,6 +171,7 @@ function handler_beat_hit() {
 		
 			case 5:
 			global.songstarted = true
+			show_debug_message(inputhandler.startspace)
 			play_song_audio_playstate()
 			instplaying = true
 			global.curbeat = 0
@@ -191,3 +194,8 @@ function handler_beat_hit() {
 	}
 	
 }
+
+dumbassdelay = time_source_create(time_source_game, 1, time_source_units_seconds, function()
+	{
+	    assetsloaded = true
+	}, [], -1);

@@ -11,6 +11,11 @@ if global.paused = false {
 	}
 	else {
 		
+		if killmyself > -1 {
+			killmyself--
+			if killmyself == 0 {assetsloaded = true}
+		}
+		
 		if classicpan == true {
 			curcamx = lerp(curcamx, camxtarget, 0.015)
 			curcamy = lerp(curcamy, camytarget, 0.015)

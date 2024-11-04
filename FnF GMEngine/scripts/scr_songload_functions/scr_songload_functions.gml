@@ -227,7 +227,6 @@ function load_playstate_assets(_isdeload) {
 		unload_tex_group("grp_char_" + stage.gf.chardata.texgroup)
 		
 	}
-	
 }
 
 function trim_character_name(_charname, _underscore) {

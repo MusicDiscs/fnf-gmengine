@@ -32,7 +32,7 @@ if GameJolt_User_LogIn_FromCache() {
 }
 else {show_debug_message("Failed to log in via cache.")}
 
-global.bpm = 0
+global.bpm = 100
 global.timesig = [4, 4]
 global.curbeat = 0
 global.curmeasure = 0

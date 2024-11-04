@@ -1,7 +1,7 @@
 titleready = false
 whitealpha = 1
 whitespeed = 0.01
-if !variable_global_exists("menumusic") {global.menumusic = load_music("freakyMenu"); set_bpm(102)}
+if !variable_global_exists("menumusic") {global.menumusic = load_music("freakyMenu");}
 else {
 	titleready = true
 	whitealpha = 1
@@ -119,3 +119,4 @@ else {
 }
 
 clear_titletext()
+set_bpm(102)

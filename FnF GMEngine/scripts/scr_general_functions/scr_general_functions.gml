@@ -1,4 +1,4 @@
-function set_bpm(_bpm, _timesig = [4, 4]) {
+function set_bpm(_bpm, _timesig = [4, 4], _beathit = true) {
 	
 	time_source_destroy(obj_persistent.beat_handler)
 	global.bpm = _bpm
@@ -11,12 +11,12 @@ function set_bpm(_bpm, _timesig = [4, 4]) {
 	    beat_hit()
 	}, [], -1);
 	time_source_start(obj_persistent.beat_handler)
-	
+	if _beathit = true {beat_hit(false)}
 }
 
-function beat_hit() {
+function beat_hit(_increasebeat = true) {
 
-	global.curbeat++
+	if _increasebeat == true {global.curbeat++}
 	with (obj_song_handler) {handler_beat_hit()}
 	with (obj_title_scene) {title_beat(global.curbeat)}
 	if global.curbeat % global.timesig[1] == 0 {

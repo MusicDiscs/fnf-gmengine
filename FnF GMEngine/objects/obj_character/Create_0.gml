@@ -65,7 +65,8 @@ function refresh_char(_name) {
 		if chardata.flip_x == true {image_xscale = -1}
 		if charid == "bf" {obj_song_handler.inputhandler.playerbarcolor = make_color_rgb(chardata.health_color[0], chardata.health_color[1], chardata.health_color[2])}
 		else if charid == "dad" {obj_song_handler.inputhandler.dadbarcolor = make_color_rgb(chardata.health_color[0], chardata.health_color[1], chardata.health_color[2])}
-		push_char_animation("idle")
+		if chardata.gf_dance == true {push_char_animation("dance_right")}
+		else {push_char_animation("idle")}
 	
 }
 
