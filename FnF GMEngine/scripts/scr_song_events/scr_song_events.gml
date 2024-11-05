@@ -59,6 +59,7 @@ function songevent_FocusCamera(_val) {
 					
 			}
 		}
+		else {_classicpan = true}
 	}
 	else {
 		_target = _val

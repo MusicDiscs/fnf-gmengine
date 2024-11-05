@@ -1,7 +1,29 @@
-if keybind_check_pressed("pause") and obj_song_handler.isdying == false {toggle_pause()}
+if keybind_check_pressed("pause") and obj_song_handler.isdying == false {
+	if global.paused = true {
+		switch curselect {
+	
+			case 0:
+			toggle_pause()
+			break;
+		
+			case 1:
+			room_goto(rm_Playstate)
+			break;
+		
+			case 2:
+			if global.storymode == true {swap_state(rm_StoryMenu)}
+			else {swap_state(rm_FreeplayMenu)}
+			break;
+	
+		}
+	}
+	else {toggle_pause()}
+}
+
+if global.paused = true {
+	if keybind_check_pressed("down") {change_option(false)}
+	if keybind_check_pressed("up") {change_option(true)}
+}
+
 if !window_has_focus() and global.paused == false {focuspause = true; toggle_pause()}
 if focuspause = true and window_has_focus() {focuspause = false; toggle_pause()}
-if keyboard_check_pressed(vk_f2) and global.paused == true and focuspause = false {
-	if global.storymode == true {swap_state(rm_StoryMenu)}
-	else {swap_state(rm_FreeplayMenu)}
-}

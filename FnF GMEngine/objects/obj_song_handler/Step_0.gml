@@ -11,14 +11,9 @@ if global.paused = false {
 	}
 	else {
 		
-		if killmyself > -1 {
-			killmyself--
-			if killmyself == 0 {assetsloaded = true}
-		}
-		
 		if classicpan == true {
-			curcamx = lerp(curcamx, camxtarget, 0.015)
-			curcamy = lerp(curcamy, camytarget, 0.015)
+			curcamx = lerp(curcamx, camxtarget, 0.052 / (fps / 60))
+			curcamy = lerp(curcamy, camytarget, 0.052 / (fps / 60))
 		}
 		
 		var _cam = view_camera[view_current]
@@ -42,6 +37,7 @@ if global.paused = false {
 		else {timestring = string(_mins) + ":" + string(_secs)}
 	
 		startframetimer--
+		time_source_start(dumbassdelay)
 		accuracy = accpoints/acctotal
 	
 		if array_length(metadata.timeChanges) > 0 and metadata.timeChanges[0].t <= inputhandler.hitwindow_center and songready = true {

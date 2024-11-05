@@ -1,6 +1,10 @@
 pausemusic = load_music("breakfast")
 if obj_song_handler.stage.bf.char == "bf_pixel" {pausemusic = load_music("breakfast-pixel")}
 else if obj_song_handler.stage.bf.char == "pico_playable" {pausemusic = load_music("breakfast-pico")}
+
+pauseoptions = ["Resume", "Restart", "Exit"]
+curselect = 0
+
 focuspause = false
 thegain = 0
 audio_sound_gain(pausemusic, 0, 0)
@@ -46,4 +50,17 @@ function toggle_pause() {
 		
 		global.paused = true
 	}	
+}
+
+function change_option(_isup) {
+	audio_play_sound(global.scrollsound, 1, false)
+	if _isup == true {
+		if curselect == 0 {curselect = array_length(pauseoptions) - 1}
+		else {curselect--}
+	}
+	else {
+		if curselect == array_length(pauseoptions) - 1 {curselect = 0}
+		else {curselect++}
+	}
+
 }

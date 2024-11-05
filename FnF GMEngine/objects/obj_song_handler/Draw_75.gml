@@ -1,8 +1,9 @@
 draw_set_alpha(deathalpha)
 draw_rectangle_color(0, 0, 1280, 720, c_black, c_black, c_black, c_black, false)
 draw_set_alpha(1)
-draw_text(5, 5, string(inputhandler.startspace))
-draw_text(5, 20, string(inputhandler.startframe))
+//draw_text(5, 5, string(inputhandler.startspace))
+//var _dt = delta_time / 1000000;
+//draw_text(5, 20, string(inputhandler.startframe * _dt))
 /*
 draw_text(5, 5, classicpan)
 draw_text(5, 20, curcamx)

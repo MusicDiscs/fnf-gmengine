@@ -10,7 +10,6 @@ vocaldad_file = undefined
 
 songready = false
 assetsloaded = false
-killmyself = 5
 
 startframetimer = 1 // Exists to delay countdown by one frame, hopefully fixes lag on beats
 
@@ -90,7 +89,7 @@ else {timestring = string(_mins) + ":" + string(_secs)}
 
 inputhandler.startspace_base = (time_seconds_to_bpm(global.bpm) * 1000 * 4)
 inputhandler.startspace = inputhandler.startspace_base
-var _frames = ((game_get_speed(gamespeed_fps) * time_seconds_to_bpm(global.bpm)) * 4)
+var _frames = ((time_seconds_to_bpm(global.bpm)) * 4)
 inputhandler.startframe = (inputhandler.startspace_base / _frames)
 
 var _tempicon = asset_get_index("spr_icon_" + stage.bf.chardata.healthicon)
@@ -101,6 +100,8 @@ if _tempicon != undefined {icons[1] = _tempicon}
 camera_set_view_size(view_camera[view_current], 1280 * curzoom, 720 * curzoom)
 
 songevent_FocusCamera(2)
+curcamx = camxtarget
+curcamy = camytarget
 
 pausemenu = instance_create_depth(0, 0, -1, obj_pause_substate)
 
@@ -152,24 +153,24 @@ function handler_beat_hit() {
 
 		switch global.curbeat {
 			
-			case 1:
+			case 0:
 			audio_play_sound(intro3, 1, false)
 			inputhandler.introscroll_ready = true
 			break;
 		
-			case 2:
+			case 1:
 			audio_play_sound(intro2, 1, false)
 			break;
 		
-			case 3:
+			case 2:
 			audio_play_sound(intro1, 1, false)
 			break;
 		
-			case 4:
+			case 3:
 			audio_play_sound(introGo, 1, false)
 			break;
 		
-			case 5:
+			case 4:
 			global.songstarted = true
 			show_debug_message(inputhandler.startspace)
 			play_song_audio_playstate()
@@ -195,7 +196,7 @@ function handler_beat_hit() {
 	
 }
 
-dumbassdelay = time_source_create(time_source_game, 1, time_source_units_seconds, function()
+dumbassdelay = time_source_create(time_source_game, 0.2, time_source_units_seconds, function()
 	{
 	    assetsloaded = true
 	}, [], -1);

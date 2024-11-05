@@ -7,7 +7,10 @@ if global.paused == false {
 	
 	customnote_frame++
 	
-	if introscroll_ready == true and startspace > 0 {startspace -= startframe}
+	if introscroll_ready == true and startspace > 0 {
+		var _dt = delta_time / 1000000;
+		startspace -= startframe * _dt
+	}
 	else if introscroll_ready == true and startspace < 0 {startspace = 0}
 	
 	if array_length(loadednotes) > 0 {	

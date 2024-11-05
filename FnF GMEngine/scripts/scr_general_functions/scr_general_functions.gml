@@ -86,12 +86,14 @@ function start_song(_song, _diff, _tag = "", _inst_tag = "default") {
 	
 }
 
-function start_week(_week, _diff) {
+function start_week(_week, _diff, _inst_tag = "default") {
 	
 	global.storymode = true
 	global.songplaylist = []
 	global.weekscore = 0
 	global.curweek = _week.fileName
+	if _inst_tag == "default" {global.inst_tag = ""}
+	else {global.inst_tag = _inst_tag}
 	audio_stop_sound(global.menumusic)
 	global.cursong = _week.songs[0][0]
 	global.curdiff = _diff
