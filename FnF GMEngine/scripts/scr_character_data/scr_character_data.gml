@@ -297,7 +297,7 @@ global.characterdata = {
 			sing_down : {
 				name : "down",
 				path : spr_chr_darnell_down,
-				offsets : [-15, -12],
+				offsets : [-23, -2],
 				hold_indices : [5, 12],
 				loops : false,
 			},
