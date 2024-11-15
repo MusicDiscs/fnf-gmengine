@@ -23,10 +23,25 @@ else {
 	}
 	
 }
+
+subframe--
+if subframe <= 0 {
+	for (var i = 0; i < array_length(weekchars); i += 1) {
+		if char_isgf[i] == true {
+			if char_frames[i] < 15 {char_frames[i]++}
+		}
+		else {
+			if flashing == true and i == 1 {if char_frames[i] < 7 {char_frames[i]++}}
+			else {if char_frames[i] < 14 {char_frames[i]++}}
+		}
+	}
+	subframe = subframe_def
+}
+
 expectedcolor[0] = lerp(expectedcolor[0], curcolor[0], (0.05 / (game_get_speed(gamespeed_fps) / 60)))
 expectedcolor[1] = lerp(expectedcolor[1], curcolor[1], (0.05 / (game_get_speed(gamespeed_fps) / 60)))
 expectedcolor[2] = lerp(expectedcolor[2], curcolor[2], (0.05 / (game_get_speed(gamespeed_fps) / 60)))
-curscore = lerp(curscore, realscore, (0.1 / (game_get_speed(gamespeed_fps) / 60)))
+curscore = lerp(curscore, realscore, (0.15 / (game_get_speed(gamespeed_fps) / 60)))
 
 storybtn_y = lerp(storybtn_y, storybtn_y_base - (storybtn_yoffset * curweeknum), (0.1 / (game_get_speed(gamespeed_fps) / 60)))
 for (var i = 0; i < array_length(weekscales); i += 1) {

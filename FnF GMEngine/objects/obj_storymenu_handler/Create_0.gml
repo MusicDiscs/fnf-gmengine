@@ -1,6 +1,9 @@
-visible = true
-image_speed = ((global.bpm / 60) / 2)
-if !audio_is_playing(global.menumusic) {audio_play_sound(global.menumusic, 0, true); set_bpm(102)}
+weekchars = [spr_blank, spr_blank, spr_blank]
+char_frames = [14, 14, 14]
+char_isgf = [false, false, false]
+subframe_def = (60/24)*(game_get_speed(gamespeed_fps))/60
+subframe = subframe_def
+gftag = "danceleft"
 
 function load_week(_name) {
 	
@@ -83,6 +86,10 @@ function select_week() {
 	flashing = true
 	timer = 1.5 * game_get_speed(gamespeed_fps)
 	alphatween = TweenFire(self, EaseOutQuart, 0, true, 0.5, 0.5, "storybtn_alpha", 0.6, 0)
+	var _thingy = asset_get_index("spr_story_char_" + curweek.weekCharacters[1] + "_hey")
+	if _thingy != -1 {weekchars[1] = _thingy} // Not working
+	else {weekchars[1] = spr_blank}
+	char_frames[1] = 0
 	
 }
 
@@ -115,21 +122,24 @@ function change_week(_isup) {
 	curweek = weeklist[curweeknum]
 	get_week_song_names()
 	
-	var _thingy = asset_get_index("spr_story_char_" + curweek.weekCharacters[1])
-	if _thingy != -1 {weekchar_bf = _thingy}
-	else {weekchar_bf = spr_blank}
-	
-	_thingy = asset_get_index("spr_story_char_" + curweek.weekCharacters[2])
-	if _thingy != -1 {weekchar_gf = _thingy}
-	else {weekchar_gf = spr_blank}
-	
-	_thingy = asset_get_index("spr_story_char_" + curweek.weekCharacters[0])
-	if _thingy != -1 {weekchar_dad = _thingy}
-	else {weekchar_dad = spr_blank}
+	var _thingy = ""
 	
 	_thingy = asset_get_index("spr_weekname_" + curweek.fileName)
 	if _thingy != -1 {weekname_spr = _thingy}
 	else {weekname_spr = spr_weekname_week1}
+	
+	for (var i = 0; i < array_length(weekchars); i += 1) {
+		if curweek.weekCharacters[i] == "gf" || curweek.weekCharacters[i] == "nene" {
+			char_isgf[i] = true
+			_thingy = asset_get_index("spr_story_char_" + curweek.weekCharacters[i] + "_" + gftag)
+		}
+		else {
+			char_isgf[i] = false
+			_thingy = asset_get_index("spr_story_char_" + curweek.weekCharacters[i])
+		}
+		if _thingy != -1 {weekchars[i] = _thingy}
+		else {weekchars[i] = spr_blank}
+	}
 	
 	curcolor = [curweek.storyColor[0], curweek.storyColor[1], curweek.storyColor[2]]
 	
@@ -146,6 +156,25 @@ function get_week_song_names() {
 	else {realscore = 0}
 }
 
+function story_menu_beat() {
+	subframe = subframe_def
+	if gftag == "danceleft" {gftag = "danceright"}
+	else {gftag = "danceleft"}
+	for (var i = 0; i < array_length(weekchars); i += 1) {
+		if flashing == true and i == 1 {}
+		else {
+			if char_isgf[i] == true {
+				var _thingy = asset_get_index("spr_story_char_" + curweek.weekCharacters[i] + "_" + gftag)
+				if _thingy != -1 {weekchars[i] = _thingy}
+				else {weekchars[i] = spr_blank}
+			}
+			char_frames[i] = 0
+		}
+	}
+}
+
 change_week(false)
 
 expectedcolor = [curweek.storyColor[0], curweek.storyColor[1], curweek.storyColor[2]]
+
+if !audio_is_playing(global.menumusic) {audio_play_sound(global.menumusic, 0, true); set_bpm(102)}

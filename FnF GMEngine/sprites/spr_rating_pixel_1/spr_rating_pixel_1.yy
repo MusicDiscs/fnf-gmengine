@@ -81,8 +81,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"grp_uiskin_pixel",
+    "path":"texturegroups/grp_uiskin_pixel",
   },
   "type":0,
   "VTile":false,

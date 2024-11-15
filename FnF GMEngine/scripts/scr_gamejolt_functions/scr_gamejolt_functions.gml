@@ -6,6 +6,7 @@ function gamejolt_post_login() {
 		sprite = sprite_add(global.gjuserdata.avatar_url, 0, 0, 0, 0, 0);
 		show_debug_message(string(global.gjuserdata))
 		gamejolt_heartbeat()
+		joltready = true
 	},
 	function(message)
 	{

@@ -1,5 +1,5 @@
-draw_sprite_ext(sprite_index, image_index, x, y, 1, 1, 0, colors[curcolor], 1)
-draw_sprite_ext(spr_title_logo, image_index, -96, -96, 1, 1, 0, colors[curcolor], 1)
+draw_sprite_ext(gf_path, gf_frame, 550, 50, 1, 1, 0, colors[curcolor], 1)
+draw_sprite_ext(spr_title_logo, logo_frame, -96, -96, 1, 1, 0, colors[curcolor], 1)
 draw_sprite(entersprite, enterframe, 125, 600)
 draw_set_alpha(whitealpha)
 draw_rectangle(0, 0, 1300, 750, false)

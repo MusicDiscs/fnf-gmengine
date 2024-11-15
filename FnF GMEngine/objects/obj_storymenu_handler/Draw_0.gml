@@ -20,9 +20,9 @@ draw_sprite(asset_get_index("spr_diffsprite_" + diffarray[thediff]), 0, storybtn
 var _color = make_color_rgb(expectedcolor[0], expectedcolor[1], expectedcolor[2])
 draw_rectangle_color(0, 50, 1280, 450, _color, _color, _color, _color, false)
 
-draw_sprite_ext(weekchar_dad, image_index, 250, 250, 0.5, 0.5, 0, c_white, 1)
-draw_sprite_ext(weekchar_bf, image_index, 640, 250, 0.8, 0.8, 0, c_white, 1)
-draw_sprite_ext(weekchar_gf, image_index, 1030, 250, 0.5, 0.5, 0, c_white, 1)
+draw_sprite_ext(weekchars[0], char_frames[0], 250, 250, 0.5, 0.5, 0, c_white, 1)
+draw_sprite_ext(weekchars[1], char_frames[1], 640, 250, 0.8, 0.8, 0, c_white, 1)
+draw_sprite_ext(weekchars[2], char_frames[2], 1030, 250, 0.5, 0.5, 0, c_white, 1)
 
 draw_rectangle_color(0, 0, 1280, 50, c_black, c_black, c_black, c_black, false)
 
@@ -30,5 +30,5 @@ draw_rectangle_color(0, 0, 1280, 50, c_black, c_black, c_black, c_black, false)
 //draw_text(5, 685, "Current Week - " + curweek.weekName + ". Press UP and DOWN to change week.")
 
 //draw_text(5, 5, string(timer))
-draw_text_scribble(5, 5, "[fnt_storymode]" + "WEEK SCORE - " + string(curscore))
+draw_text_scribble(5, 5, "[fnt_storymode]" + "WEEK SCORE - " + string(int64(curscore)))
 draw_text_scribble(1275, 5, "[fnt_storymode][fa_right]" + curweek.storyName)

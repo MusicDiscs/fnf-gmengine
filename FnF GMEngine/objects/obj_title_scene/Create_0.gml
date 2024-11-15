@@ -1,20 +1,27 @@
 titleready = false
 whitealpha = 1
 whitespeed = 0.01
+
+subframe_def = (60/24)*(game_get_speed(gamespeed_fps))/60
+subframe = subframe_def
+gf_frame = 0
+logo_frame = 0
+logo_max = sprite_get_number(spr_title_logo)
+gf_max = sprite_get_number(spr_title_gf_left)
+gf_path = spr_title_gf_left
+
 if !variable_global_exists("menumusic") {global.menumusic = load_music("freakyMenu");}
 else {
 	titleready = true
 	whitealpha = 1
 	whitespeed = 0.02
 }
+
 load_tex_group("grp_menu_title")
-image_speed = ((global.bpm / 60) / 2)
 enterframe = 0
 fps_accounting = 1 * (game_get_speed(gamespeed_fps) / 60)
 trans_timer = -1
 entersprite = spr_title_enter
-x = 550
-y = 50
 titletext = [["text to display", 5, 5], ["the second", 5, 20]]
 
 ringtone = load_music("girlfriendsRingtone")
@@ -48,6 +55,10 @@ function clear_titletext() {
 }
 
 function title_beat(_beat) {
+if gf_path == spr_title_gf_left {gf_path = spr_title_gf_right}
+else {gf_path = spr_title_gf_left}
+gf_frame = 0
+logo_frame = 0
 if titleready = false {
 	switch _beat {
 		case 1:

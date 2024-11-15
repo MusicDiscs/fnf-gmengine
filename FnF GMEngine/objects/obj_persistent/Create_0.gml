@@ -24,14 +24,6 @@ global.curcharacter = "bf"
 
 global.lastchar = ""
 
-global.gjuserdata = 0
-
-if GameJolt_User_LogIn_FromCache() {
-	show_debug_message("Logged in via cache!")
-	gamejolt_post_login()
-}
-else {show_debug_message("Failed to log in via cache.")}
-
 global.bpm = 100
 global.timesig = [4, 4]
 global.curbeat = 0
@@ -70,6 +62,15 @@ thealpha = 0
 global.alphabet = font_add_sprite(spr_alphabet, 32, true, 1)
 
 debugstring = ""
+
+global.gjuserdata = 0
+joltready = false
+
+if GameJolt_User_LogIn_FromCache() {
+	show_debug_message("Logged in via cache!")
+	gamejolt_post_login()
+}
+else {show_debug_message("Failed to log in via cache."); joltready = true}
 
  // STATE SWAP VARIABLES //
 global.swappingstate = false

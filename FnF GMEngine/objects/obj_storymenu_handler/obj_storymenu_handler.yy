@@ -32,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_story_char_nene",
-    "path":"sprites/spr_story_char_nene/spr_story_char_nene.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
