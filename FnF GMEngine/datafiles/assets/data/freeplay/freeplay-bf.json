@@ -1,5 +1,6 @@
 {
     "songlist":[
+        ["tutorial", "", "gf"],
         ["bopeebo", "", "dad", ["Default", "Pico"]],
         ["fresh", "", "dad", ["Default", "Pico"]],
         ["dadbattle", "", "dad", ["Default", "Pico"]],

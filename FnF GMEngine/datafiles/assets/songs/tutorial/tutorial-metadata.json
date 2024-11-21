@@ -6,7 +6,7 @@
   "playData": {
     "ratings": { "easy": 0, "normal": 0, "hard": 1 },
     "stage": "mainStage",
-    "characters": { "player": "bf", "opponent": "gf" },
+    "characters": { "player": "bf", "opponent": "gf", "girlfriend":"gf"},
     "difficulties": ["easy", "normal", "hard"],
     "noteStyle": "funkin",
     "album": "volume1",
