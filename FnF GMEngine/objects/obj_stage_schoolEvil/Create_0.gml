@@ -16,6 +16,8 @@ dad.camoffset = [160, 0]
 gf.pos = [340, 166]
 gf.camoffset = [0, 0]
 
+obj_song_handler.countdown_sounds = ["intro1-pixel", "intro2-pixel", "intro3-pixel", "introGo-pixel"]
+
 function draw_stage() {
 	gpu_set_tex_filter(false)
 	

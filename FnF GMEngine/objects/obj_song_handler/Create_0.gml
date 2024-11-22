@@ -19,6 +19,8 @@ inst = asset_sound
 vocalbf = asset_sound
 vocaldad = asset_sound
 
+countdown_sounds = ["intro1", "intro2", "intro3", "introGo"]
+
 timestring = "null"
 timeprogress = 1
 

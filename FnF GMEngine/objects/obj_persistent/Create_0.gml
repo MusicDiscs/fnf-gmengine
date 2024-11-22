@@ -3,6 +3,22 @@ randomize()
 audio_group_load(audiogroup_default)
 load_tex_group("grp_global")
 
+#region Discord Setup
+#macro DISCORD_APP_ID "1309401644332748800"
+
+ready = false;
+
+alarm[0] = room_speed * 5;
+
+if (!np_initdiscord(DISCORD_APP_ID, true, np_steam_app_id_empty))
+{
+	show_error("NekoPresence init fail.", true);
+}
+#endregion
+
+np_setpresence_more("Friday Night Funkin", "Friday Night Funkin", false)
+//np_setpresence_buttons(0, "Try the game!", "https://www.youtube.com/watch?v=Bf1tx8XT8W8")
+
 global.debug = false // To set compiled builds into debug mode, make this true.
 if string(GM_build_type) == "run" {global.debug = true}
 debugoverlay = false

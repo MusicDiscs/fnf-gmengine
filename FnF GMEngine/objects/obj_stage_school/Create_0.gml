@@ -16,6 +16,8 @@ dad.camoffset = [110, -50]
 gf.pos = [340, 136]
 gf.camoffset = [0, 0]
 
+obj_song_handler.countdown_sounds = ["intro1-pixel", "intro2-pixel", "intro3-pixel", "introGo-pixel"]
+
 freakpath = [spr_stg_pixel_bgfreaks_left, spr_stg_pixel_bgfreaks_right]
 if global.cursong == "roses" {freakpath = [spr_stg_pixel_bgfreaks_pissed_left, spr_stg_pixel_bgfreaks_pissed_right]}
 trees = create_animated_stagesprite(spr_stg_pixel_tree, -780, -1000, false)

@@ -13,6 +13,12 @@ if keybind_check_pressed("pause") and obj_song_handler.isdying == false {
 			case 2:
 			if global.storymode == true {swap_state(rm_StoryMenu)}
 			else {swap_state(rm_FreeplayMenu)}
+			video_close()
+			break;
+			
+			case 3:
+			video_close()
+			toggle_pause()
 			break;
 	
 		}

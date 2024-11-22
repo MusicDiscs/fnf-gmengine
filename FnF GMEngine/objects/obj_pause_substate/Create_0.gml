@@ -43,6 +43,13 @@ function toggle_pause() {
 			audio_sound_gain(pausemusic, 0, 0)
 			audio_sound_gain(pausemusic, 0.7, 6000)
 		}
+		
+		var _status = video_get_status()
+		if _status == video_status_playing {pauseoptions = ["Resume", "Restart", "Exit", "Skip Cutscene"]}
+		else {pauseoptions = ["Resume", "Restart", "Exit"]}
+		
+		if curselect > (array_length(pauseoptions) - 1) {curselect = 0}		
+		
 		video_pause()
 		
 		with (obj_character) {lastspeed = image_speed}

@@ -179,12 +179,11 @@ function load_playstate_assets(_isdeload) {
 		load_tex_group("grp_noteskin_funkin")
 		load_tex_group(inputhandler.noteskin[0].uigroup)
 		load_tex_group(inputhandler.noteskin[1].uigroup)
-		var _playstatesounds = ["intro1", "intro2", "intro3", "introGo"]
-		var _miss_sounds = ["missnote1", "missnote2", "missnote3"]
-		for (var i = 0; i < array_length(_playstatesounds); i += 1) {
-			variable_instance_set(obj_song_handler, _playstatesounds[i], audio_create_stream("assets\\sounds\\" + _playstatesounds[i] + ".ogg"))
-			show_debug_message("cached audio file " + _playstatesounds[i])
+		for (var i = 0; i < array_length(countdown_sounds); i += 1) {
+			variable_instance_set(obj_song_handler, string_replace(countdown_sounds[i], "-" + inputhandler.uiskin, ""), audio_create_stream("assets\\sounds\\" + countdown_sounds[i] + ".ogg"))
+			show_debug_message("cached audio file " + countdown_sounds[i])
 		}
+		var _miss_sounds = ["missnote1", "missnote2", "missnote3"]
 		for (var i = 0; i < array_length(_miss_sounds) - 1; i += 1) {
 			array_push(miss_sounds, audio_create_stream("assets\\sounds\\" + _miss_sounds[i] + ".ogg"))
 		}

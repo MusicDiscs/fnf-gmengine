@@ -7,7 +7,7 @@ if global.paused = true and focuspause == false {
 	draw_text_scribble(640, 250, "[fnt_big][fa_center]Paused")
 	for (var i = 0; i < array_length(pauseoptions); i += 1) {
 		if i == curselect {draw_set_alpha(1)}
-		else {draw_set_alpha(0.8)}
+		else {draw_set_alpha(0.7)}
 		draw_text_scribble(640, 340 + (50 * i), "[fnt_big][fa_center]" + pauseoptions[i])
 	}
 	draw_set_alpha(1)

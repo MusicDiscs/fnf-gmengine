@@ -16,6 +16,26 @@ dad.camoffset = [500, -100]
 gf.pos = [1153, 450]
 gf.camoffset = [0, 0]
 
+videoplaying = false
+
+curvid = "test"
+
+switch global.cursong {
+
+	case "darnell":
+	curvid = "darnellCutscene"
+	break;
+	
+	case "2hot":
+	curvid = "2hotCutscene"
+	break;
+	
+	case "blazin":
+	curvid = "blazinCutscene"
+	break;
+	
+}
+
 function draw_stage() {
 	
 	draw_sprite_ext(spr_stg_freeway_sky, 0, 0, 0, 1, 1, 0, c_white, 1)
