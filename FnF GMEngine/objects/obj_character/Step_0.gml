@@ -1,11 +1,9 @@
 if global.paused == true {image_speed = 0}
 else {
-	if (holding == true) {
-		if struct_exists(struct_get(chardata.animations, curanim), "hold_indices") and image_index == (struct_get(chardata.animations, curanim).hold_indices[1]) {
-			show_debug_message("indice reset")
-			image_index = (struct_get(chardata.animations, curanim).hold_indices[0])
-			image_speed = defaultspeed
-		}
+	if sprite_index != struct_get(chardata.animations, "idle").path and struct_exists(struct_get(chardata.animations, curanim), "hold_indices") and image_index == (struct_get(chardata.animations, curanim).hold_indices[1]) {
+		show_debug_message("indice reset")
+		image_index = (struct_get(chardata.animations, curanim).hold_indices[0])
+		image_speed = defaultspeed
 	}
 	func_on_step()
 }

@@ -12,9 +12,9 @@
   "Folders":[
     {"$GMFolder":"","%Name":"Animation Curves","folderPath":"folders/Animation Curves.yy","name":"Animation Curves","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Extensions","folderPath":"folders/Extensions.yy","name":"Extensions","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Discord","folderPath":"folders/Extensions/Discord.yy","name":"Discord","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"GameJolt","folderPath":"folders/Extensions/GameJolt.yy","name":"GameJolt","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Core System (Don't Touch)","folderPath":"folders/Extensions/GameJolt/Core System (Don't Touch).yy","name":"Core System (Don't Touch)","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Discord","folderPath":"folders/Extensions/Discord.yy","name":"Discord","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scribble","folderPath":"folders/Extensions/Scribble.yy","name":"Scribble","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"(System - don't call these functions)","folderPath":"folders/Extensions/Scribble/(System - don't call these functions).yy","name":"(System - don't call these functions)","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Classes","folderPath":"folders/Extensions/Scribble/(System - don't call these functions)/Classes.yy","name":"Classes","resourceType":"GMFolder","resourceVersion":"2.0",},
