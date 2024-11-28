@@ -135,6 +135,7 @@ function trigger_death() {
 }
 
 function end_song() {
+	endtriggered = true
 	save_song_score(global.cursong, global.curdiff, curscore, accuracy * 100)
 	array_delete(global.songplaylist, 0, 1)
 	if global.storymode == true {
@@ -143,7 +144,6 @@ function end_song() {
 		else {swap_state(rm_Playstate, "instant")}
 	}
 	else {swap_state(rm_FreeplayMenu)}
-	endtriggered = true
 }
 function handler_beat_hit() {
 	

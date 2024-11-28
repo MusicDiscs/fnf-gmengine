@@ -27,6 +27,7 @@ if global.paused = false {
 			_secs = int64(audio_sound_length(inst_file) - audio_sound_get_track_position(inst))
 			timeprogress = (audio_sound_length(inst_file) - audio_sound_get_track_position(inst))/audio_sound_length(inst_file)
 			if endtriggered == false and audio_sound_get_track_position(inst) == 0 and array_length(inputhandler.loadednotes) + array_length(inputhandler.thenotes) == 0 {end_song()}
+			else if endtriggered == true {_secs = 0}
 		}
 		for (var i = 0; 59 < _secs; i += 1) {
 			_secs -= 60
