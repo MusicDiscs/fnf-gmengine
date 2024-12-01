@@ -28,8 +28,8 @@ function songevent_FocusCamera(_val) {
 	
 	if typeof(_val) == "struct" {
 		_target = _val.char
-		if struct_exists(_val, "x") {_bonusx = _val.x}
-		if struct_exists(_val, "y") {_bonusy = _val.y}
+		//if struct_exists(_val, "x") {_bonusx = _val.x}
+		//if struct_exists(_val, "y") {_bonusy = _val.y}
 		if struct_exists(_val, "ease") {
 			switch _val.ease {
 			
@@ -65,7 +65,7 @@ function songevent_FocusCamera(_val) {
 		_target = _val
 		_classicpan = true
 	}
-	
+	obj_song_handler.curtarget = _target
 	switch _target {
 		
 		case -1:
@@ -166,6 +166,7 @@ function songevent_ZoomCamera(_val) {
 	}
 	
 	obj_song_handler.curzoomtween = TweenFire(obj_song_handler, _ease, 0, true, 0, _time, "zoom_mult", obj_song_handler.zoom_mult, _tarzoom)
+	//obj_song_handler.curzoomtween = TweenFire(obj_song_handler, _ease, 0, true, 0, _time, "curzoom", obj_song_handler.curzoom, _tarzoom)
 	
 }
 	

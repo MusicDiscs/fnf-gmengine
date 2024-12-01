@@ -38,6 +38,7 @@ deathalpha = 0
 deathtween = TWEEN_NULL
 isdying = false
 
+curtarget = 2
 curcamx = 0
 curcamy = 0
 camxtarget = 0

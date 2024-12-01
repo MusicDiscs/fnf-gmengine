@@ -11,15 +11,15 @@ if global.paused = false {
 	}
 	else {
 		
-		if classicpan == true {
-			curcamx = lerp(curcamx, camxtarget, 0.052 / (fps / 60))
-			curcamy = lerp(curcamy, camytarget, 0.052 / (fps / 60))
-		}
-		
 		var _cam = view_camera[view_current]
 		camera_set_view_size(_cam, ((1280 * curzoom) * zoom_mult) * bop_zoom, ((720 * curzoom) * zoom_mult) * bop_zoom)
 		var _center = [curcamx + (1280/2), curcamy + (720/2)]
 		camera_set_view_pos(_cam, _center[0] - (camera_get_view_width(_cam) / 2), _center[1] - (camera_get_view_height(_cam) / 2))
+		
+		if classicpan == true {
+			curcamx = lerp(curcamx, camxtarget, 0.052 / (fps / 60))
+			curcamy = lerp(curcamy, camytarget, 0.052 / (fps / 60))
+		}
 	
 		var _mins = 0
 		var _secs = int64(audio_sound_length(inst_file))
