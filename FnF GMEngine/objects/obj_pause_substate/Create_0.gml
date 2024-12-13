@@ -2,6 +2,8 @@ pausemusic = load_music("breakfast")
 if obj_song_handler.stage.bf.char == "bf_pixel" {pausemusic = load_music("breakfast-pixel")}
 else if obj_song_handler.stage.bf.char == "pico_playable" {pausemusic = load_music("breakfast-pico")}
 
+pause_surface = surface_create(1280, 720)
+
 pauseoptions = ["Resume", "Restart", "Exit"]
 curselect = 0
 
