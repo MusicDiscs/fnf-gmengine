@@ -10,12 +10,15 @@ function save_clientprefs()
 	array_push(_saveArray, global.clientprefs)
 	
 	// Actual saving
-	var _filename = "gme_clientprefs" + ".sav";
+	var _filename = game_save_id + "gme_clientprefs" + ".sav";
 	var _json = json_stringify(_saveArray);
 	var _buffer = buffer_create( string_byte_length(_json) + 1, buffer_fixed, 1);
 	buffer_write(_buffer, buffer_string, _json);
 	
 	buffer_save(_buffer, _filename);
+	
+	if file_exists(_filename) {show_debug_message("Saved Game!")}
+	else {show_debug_message("Failed to save??????")}
 	
 	buffer_delete(_buffer);
 

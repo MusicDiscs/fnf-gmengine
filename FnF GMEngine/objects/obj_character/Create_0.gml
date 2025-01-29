@@ -37,6 +37,13 @@ function setup_functions(_name) {
 				push_char_animation("sing_"+ obj_song_handler.inputhandler.dirs[_note[1]])
 			}
 		}
+		
+		case "pico_playable":
+		func_on_notehit = function(_note) {
+			if _note[3] == "mom" {
+				push_char_animation("sing_"+ obj_song_handler.inputhandler.dirs[_note[1]])
+			}
+		}
 		break;
 	
 	}

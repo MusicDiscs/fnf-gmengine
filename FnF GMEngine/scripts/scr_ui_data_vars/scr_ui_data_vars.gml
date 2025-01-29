@@ -36,8 +36,9 @@ function ui_load_vars_funkin() {
 	dadbarcolor = c_red
 
 	icon_scale_base = 0.8
-	bficon_scale = 0.8
-	dadicon_scale = 0.8
+	icon_scale_max = 0.85
+	bficon_scale = icon_scale_base
+	dadicon_scale = icon_scale_base
 	
 	// I think it's pretty obvious where each of these functions is ran
 	ui_draw = function() {
@@ -114,8 +115,8 @@ function ui_load_vars_funkin() {
 	ui_beat = function() {
 		TweenDestroy(icon_tween[0])
 		TweenDestroy(icon_tween[1])
-		bficon_scale = 1
-		dadicon_scale = 1
+		bficon_scale = icon_scale_max
+		dadicon_scale = icon_scale_max
 		icon_tween[0] = TweenFire(obj_input_handler, EaseOutQuart, 0, true, 0, time_bpm_to_seconds(global.bpm), "bficon_scale", bficon_scale, icon_scale_base)
 		icon_tween[1] = TweenFire(obj_input_handler, EaseOutQuart, 0, true, 0, time_bpm_to_seconds(global.bpm), "dadicon_scale", dadicon_scale, icon_scale_base)
 	}
