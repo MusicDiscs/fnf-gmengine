@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_gamejolt_functions",
+  "%Name":"scr_note_functions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_gamejolt_functions",
+  "name":"scr_note_functions",
   "parent":{
     "name":"Functions",
     "path":"folders/Scripts/Functions.yy",

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_songload_functions",
   "parent":{
-    "name":"Playstate",
-    "path":"folders/Scripts/Playstate.yy",
+    "name":"Functions",
+    "path":"folders/Scripts/Functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_general_functions",
   "parent":{
-    "name":"Data",
-    "path":"folders/Scripts/Data.yy",
+    "name":"Functions",
+    "path":"folders/Scripts/Functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -203,8 +203,8 @@
   "maintainGms1Font":false,
   "name":"fnt_statbar",
   "parent":{
-    "name":"Playstate",
-    "path":"folders/Fonts/Playstate.yy",
+    "name":"Game",
+    "path":"folders/Fonts/Game.yy",
   },
   "pointRounding":0,
   "ranges":[

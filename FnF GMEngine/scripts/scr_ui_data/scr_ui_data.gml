@@ -1,4 +1,4 @@
-global.uiskin_list = ["funkin", "pixel"]
+global.uiskin_list = ["funkin", "pixel"] // Stupid array but idk how to check for a function existing lmao
 
 function ui_load_vars_funkin() {
 	
@@ -35,8 +35,8 @@ function ui_load_vars_funkin() {
 	playerbarcolor = c_green
 	dadbarcolor = c_red
 
-	icon_scale_base = 0.8
-	icon_scale_max = 0.85
+	icon_scale_base = 0.85
+	icon_scale_max = 0.95
 	bficon_scale = icon_scale_base
 	dadicon_scale = icon_scale_base
 	

@@ -1,4 +1,4 @@
-global.eventlist = ["FocusCamera", "PlayAnimation", "ZoomCamera", "ChangeCharacter", "SetCameraBop"]
+global.eventlist = ["FocusCamera", "PlayAnimation", "ZoomCamera", "ChangeCharacter", "SetCameraBop"] // Stupid array but idk how to check for a function existing lmao
 function song_event_run(_name, _val) {
 	
 	show_debug_message("Event " + string(_name) + " ran with values " + string(_val) + ".")

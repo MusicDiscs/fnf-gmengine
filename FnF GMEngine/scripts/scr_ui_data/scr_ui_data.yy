@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_ui_data_vars",
+  "%Name":"scr_ui_data",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_ui_data_vars",
+  "name":"scr_ui_data",
   "parent":{
-    "name":"Playstate",
-    "path":"folders/Scripts/Playstate.yy",
+    "name":"Data",
+    "path":"folders/Scripts/Data.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

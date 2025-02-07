@@ -17,8 +17,8 @@
   ],
   "name":"rm_InputTest",
   "parent":{
-    "name":"Playstate",
-    "path":"folders/Rooms/Playstate.yy",
+    "name":"Game",
+    "path":"folders/Rooms/Game.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

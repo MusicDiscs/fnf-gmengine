@@ -7,4 +7,3 @@ Funkin' Team - Made FnF
 Jujuadams - Developer of Scribble
 Stephen Loney - Developer of TweenGMX
 Vy - Helped with code
-William Lima - Gamemaker XML Code

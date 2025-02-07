@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_song_events",
+  "%Name":"scr_note_data",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_song_events",
+  "name":"scr_note_data",
   "parent":{
-    "name":"Playstate",
-    "path":"folders/Scripts/Playstate.yy",
+    "name":"Data",
+    "path":"folders/Scripts/Data.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

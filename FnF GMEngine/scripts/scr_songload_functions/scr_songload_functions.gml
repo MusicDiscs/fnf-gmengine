@@ -1,3 +1,4 @@
+// I'll rewrite this someday holy fuck
 function load_song_playstate(_name, _diff, _tag = "", _inst_tag = "") {
 	
 	metadata = load_song_metadata(_name, _diff, _tag)
