@@ -1,8 +1,5 @@
 chart = undefined
 
-note_surface = surface_create(1280, 720)
-ui_surface = surface_create(1280, 720)
-
 uiskin = "funkin"
 noteskin = [global.noteskins.funkin, global.noteskins.funkin]
 
